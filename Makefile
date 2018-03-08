@@ -1,13 +1,13 @@
-handout:
-	cd Rmd-handout ;\
-	Rscript --quiet _render.R "bookdown::gitbook" ;\
-	Rscript --quiet _render.R "bookdown::pdf_book" ;\
-	cd ..
+magick:
+	magick docs/book-ncar-en.pdf[0] docs/cover.png
 
 publish:
 	git pull ;\
+	rm -rf docs ;\
 	Rscript --quiet _render.R "bookdown::gitbook" ;\
 	Rscript --quiet _render.R "bookdown::pdf_book" ;\
+	Rscript --quiet _render.R "bookdown::epub_book" ;\
+	magick docs/book-ncar-en.pdf[0] docs/cover.png
 	git add .; git commit -m 'publish: gitbook'; git push
 
 gitbook:
@@ -31,3 +31,5 @@ rmd:
 
 go:
 	make gitbook ; open docs/index.html
+
+
