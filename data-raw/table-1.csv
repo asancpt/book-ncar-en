@@ -1,0 +1,38 @@
+Parameter,WinNonlin,Description
+b0,b0,Intercept
+CMAX,Cmax,Max Concentration (Conc)
+CMAXD,Cmax_D,Max Conc Norm by Dose
+TMAX,Tmax_D,Time of Cmax
+TLAG,Tlag,Time Until First Nonzero Conc
+CLST,Clast,Last Nonzero Conc
+CLSTP,Clast_pred,Last Nonzero Conc Pred
+TLST,Tlast,Time of Last Nonzero Conc
+LAMZHL,HL_Lambda_z,Half-Life Lambda z
+LAMZ,Lambda_z,Lambda z
+LAMZLL,Lambda_z,lower Lambda z Lower Limit
+LAMZUL,Lambda_z,upper Lambda z Upper Limit
+LAMZNPT,No_points_Lambda_z,Number of Points for Lambda z
+CORRXY,Corr_XY,Correlation Between Time X and Log Conc Y
+R2,Rsq,R Squared
+R2ADJ,Rsq_adjusted,R Squared Adjusted
+AUCLST,AUClast,AUC to Last Nonzero Conc
+AUCALL,AUCall,AUC All
+AUCIFO,AUCINF_obs,AUC Infinity Obs
+AUCIFOD,AUCINF_D_obs,AUC Infinity Obs Norm by Dose
+AUCIFP,AUCINF_Pred,AUC Infinity Pred
+AUCIFPD,AUCINF_D_pred,AUC Infinity Pred Norm by Dose
+AUCPEO,AUC_Extrap_obs,AUC %Extrapolation Obs
+AUCPEP,AUC_Extrap_pred,AUC %Extrapolation Pred
+AUMCLST,AUMClast,AUMC to Last Nonzero Conc
+AUMCIFO,AUMCINF_obs,AUMC Infinity Obs
+AUMCIFP,AUMCINF_pred,AUMC Infinity Pred
+AUMCPEO,AUMC_Extrap_obs,AUMC %Extrapolation Obs
+AUMCPEP,AUMC_Extrap_pred,AUMC % Extrapolation Pred
+VZFO,Vz_F_obs,Vz Obs by F
+VZFP,Vz_F_p,Vz Pred by F
+CLFO,Cl_F_obs,Total CL Obs by F
+CLFP,Cl_F_pred,Total CL Pred by F
+MRTEVLST,MRTlast,MRT Extravasc to Last Nonzero Conc
+MRTEVIFO,MRTINF_obs,MRT Extravasc Infinity Obs
+MRTEVIFP,MRTINF_pred,MRT Extravasc Infinity Pred
+

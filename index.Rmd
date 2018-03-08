@@ -2,7 +2,7 @@
 title: "R packages for Noncompartmental Analysis"
 author: "Sungpil Han"
 date: "`r Sys.Date()`"
-bibliography: [bib/packages.bib]
+bibliography: [bib/packages.bib, bib/manual.bib]
 biblio-style: apalike
 link-citations: yes
 colorlinks: yes

@@ -57,8 +57,14 @@ WinNonlin®, we performed NCA using Theoph dataset ob-
 tained from the R software. For comparison of the NCA results,
 we selected the following conditions: extravascular, linear-up
 linear-down, and best fit. We found no discrepancy between the
-two results as shown in Table 3 (a randomized subject, Subject
+two results as shown in Table \@ref(tab:table2) (a randomized subject, Subject
 ID = 8).
+
+```{r table3, echo = FALSE}
+kable(read_csv('data-raw/table-3.csv'), caption = 'Comparison of NCA results generated from WinNonlin and ncar package')
+```
+
+
 In order to further validate these packages, we compared NCA
 results using Indometh, another available dataset of the R
 software as well as other datasets of a number of subjects from
