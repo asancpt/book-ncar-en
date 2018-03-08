@@ -2,12 +2,17 @@
 title: "R packages for Noncompartmental Analysis"
 author: "Sungpil Han"
 date: "`r Sys.Date()`"
+knit: "bookdown::render_book"
+documentclass: krantz
 bibliography: [bib/packages.bib, bib/manual.bib]
 biblio-style: apalike
 link-citations: yes
 colorlinks: yes
 lot: yes
 lof: yes
+fontsize: 12pt
+monofont: "Source Code Pro"
+monofontoptions: "Scale=0.7"
 output:
   bookdown::gitbook:
     css: css/style.css
@@ -37,3 +42,4 @@ funded by the Ministry of Education, Science and Technology
 Lim from the Scientific Publications Team at Asan Medical
 Center for his editorial assistance in preparing this manuscript.
 
+\mainmatter

@@ -75,12 +75,7 @@ and WinNonlin®.
 
 # Discussion
 
-We developed two R packages─NonCompart and ncar for
-NCA. Through these packages, we aimed to imple ment the fol-
-lowing functionalities for performing NCA: 1) CDISC SDTM
-terms; 2) automatic slope selection with the same criterion of
-WinNonlin®; 3) supporting both ‘linear-up linear-down’ and
-‘linear-up log-down’ method; and 4) interval (partial) AUCs
+We developed two R packages - NonCompart and ncar for NCA. Through these packages, we aimed to imple ment the following functionalities for performing NCA: 1) CDISC SDTM terms; 2) automatic slope selection with the same criterion of WinNonlin®; 3) supporting both ‘linear-up linear-down’ and ‘linear-up log-down’ method; and 4) interval (partial) AUCs
 with ‘linear’ or ‘log’ interpolation method. These packages
 are convenient and efficient because they enable prepara-
 tion of data and NCA as well as generation of reports includ-
@@ -97,7 +92,7 @@ is helpful to construct PP domain. In the present practice, one
 has to change variables from WinNonlin® one by one, which is
 an especially difficult task for those without specific knowledge
 on SDTM. A number of packages can perform NCA, but no
-package─even commercial softwares─can give outputs in the
+package-even commercial softwares-can give outputs in the
 format of SDTM or receive SDTM-formatted input data. It is
 important to ensure that the reports are legible to sponsors and
 regulatory bodies by generating a consistent and systematic re-

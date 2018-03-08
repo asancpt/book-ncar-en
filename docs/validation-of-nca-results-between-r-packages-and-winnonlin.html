@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="acknowledgements.html">
-<link rel="next" href="methods.html">
+<link rel="prev" href="ncar-package-generation-of-nca-reports.html">
+<link rel="next" href="discussion.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -134,38 +134,201 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
-<p>The aim of pharmacokinetics (PK) studies is to examine the kinetics of a drug with regard to absorption, distribution, metabolism and elimination in the body. PK data analysis consists of noncompartmental analysis (NCA) and nonlinear regression analysis. <span class="citation">(Acharya et al. <a href="#ref-acharya">2016</a>; Gabrielsson <a href="#ref-gab">2016</a>)</span> NCA uses the trapezoidal rule for measurement of area under the concentration-time curve (AUC), and requires fewer assumptions than model-based analysis. <span class="citation">(Gabrielsson <a href="#ref-gab">2016</a>)</span> NCA allows for estimation of various PK parameters such as AUC, peak observed drug concentration (C<sub>max</sub>), time of peak concentration (T<sub>max</sub>), and elimination half-life. Particularly, AUC and C<sub>max</sub> are often accepted as the criteria for approval of bioequivalent drugs.</p>
-<p>R, a widely-used computer language, is a suite of libraries of statistical and mathematical computations. <span class="citation">(R Core Team <a href="#ref-R-base">2017</a>)</span> Despite its relatively small base system compared with other commercial softwares for NCA such as WinNonlin®[4] and Kinetica,[5] R has robust functions for scientific computation and numerous add-in packages for use in various fields. [6] Therefore, many efforts are being made to replace commercial softwares with R packages.</p>
-<p>In this article, we introduce two newly-developed R packages, NonCompart <span class="citation">(Bae <a href="#ref-R-NonCompart">2017</a><a href="#ref-R-NonCompart">b</a>)</span> and ncar <span class="citation">(Bae <a href="#ref-R-ncar">2017</a><a href="#ref-R-ncar">a</a>)</span>, that are compatible with SDTM (Study Data Tabulation Model)-formatted dataset of CDISC (Clinical Data Interchange Standards Consortium), which is the standard of documentation submitted to regulatory authorities,[7] while providing a practical method for producing complete NCA reports.</p>
-
+<div id="validation-of-nca-results-between-r-packages-and-winnonlin" class="section level2">
+<h2><span class="header-section-number">3.3</span> Validation of NCA results between R packages and WinNonlin®</h2>
+<p>To demonstrate the accordance of outputs by ncar package and WinNonlin®, we performed NCA using Theoph dataset ob- tained from the R software. For comparison of the NCA results, we selected the following conditions: extravascular, linear-up linear-down, and best fit. We found no discrepancy between the two results as shown in Table <a href="dataset.html#tab:table2">1.2</a> (a randomized subject, Subject ID = 8).</p>
+<table>
+<caption><span id="tab:table3">Table 1.3: </span>Comparison of NCA results generated from WinNonlin and ncar package</caption>
+<thead>
+<tr class="header">
+<th align="left">Parameter</th>
+<th align="left">WinNonlin</th>
+<th align="left">ncar</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">CMAX</td>
+<td align="left">7.56 mg/L</td>
+<td align="left">7.5600 mg/L</td>
+</tr>
+<tr class="even">
+<td align="left">CMAXD</td>
+<td align="left">0.023625 mg/L/mg</td>
+<td align="left">0.0236 mg/L/mg</td>
+</tr>
+<tr class="odd">
+<td align="left">TMAX</td>
+<td align="left">2.02 h</td>
+<td align="left">2.0200 h</td>
+</tr>
+<tr class="even">
+<td align="left">TLAG</td>
+<td align="left">0 h</td>
+<td align="left">0.0000 h</td>
+</tr>
+<tr class="odd">
+<td align="left">CLST</td>
+<td align="left">1.25 mg/L</td>
+<td align="left">1.2500 mg/L</td>
+</tr>
+<tr class="even">
+<td align="left">TLST</td>
+<td align="left">24.12 h</td>
+<td align="left">24.1200 h</td>
+</tr>
+<tr class="odd">
+<td align="left">LAMZHL</td>
+<td align="left">8.510037883 h</td>
+<td align="left">8.5100 h</td>
+</tr>
+<tr class="even">
+<td align="left">LAMZ</td>
+<td align="left">0.08145054 /h</td>
+<td align="left">0.0815 /h</td>
+</tr>
+<tr class="odd">
+<td align="left">LAMZLL</td>
+<td align="left">3.53 h</td>
+<td align="left">3.5300 h</td>
+</tr>
+<tr class="even">
+<td align="left">LAMZUL</td>
+<td align="left">24.12 h</td>
+<td align="left">24.1200 h</td>
+</tr>
+<tr class="odd">
+<td align="left">LAMZNPT</td>
+<td align="left">6</td>
+<td align="left">6</td>
+</tr>
+<tr class="even">
+<td align="left">CORRXY</td>
+<td align="left">-0.995496053</td>
+<td align="left">-0.9955</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">0.991012391</td>
+<td align="left">0.991</td>
+</tr>
+<tr class="even">
+<td align="left">R2ADJ</td>
+<td align="left">0.988765489</td>
+<td align="left">0.9888</td>
+</tr>
+<tr class="odd">
+<td align="left">AUCLST</td>
+<td align="left">88.55995 h*mg/L</td>
+<td align="left">88.5600 h*mg/L</td>
+</tr>
+<tr class="even">
+<td align="left">AUCALL</td>
+<td align="left">88.55995 h*mg/L</td>
+<td align="left">88.5600 h*mg/L</td>
+</tr>
+<tr class="odd">
+<td align="left">AUCIFO</td>
+<td align="left">103.906687 h*mg/L</td>
+<td align="left">103.9067 h*mg/L</td>
+</tr>
+<tr class="even">
+<td align="left">AUCIFOD</td>
+<td align="left">0.324708 h*mg/L/mg</td>
+<td align="left">0.3247 h*mg/L/mg</td>
+</tr>
+<tr class="odd">
+<td align="left">AUCIFP</td>
+<td align="left">103.643051 h*mg/L</td>
+<td align="left">103.6431 h*mg/L</td>
+</tr>
+<tr class="even">
+<td align="left">AUCIFP</td>
+<td align="left">0.323884 h*mg/L/mg</td>
+<td align="left">0.3239 h*mg/L/mg</td>
+</tr>
+<tr class="odd">
+<td align="left">AUCPEO</td>
+<td align="left">14.77%</td>
+<td align="left">14.77%</td>
+</tr>
+<tr class="even">
+<td align="left">AUCPEP</td>
+<td align="left">14.55%</td>
+<td align="left">14.55%</td>
+</tr>
+<tr class="odd">
+<td align="left">AUMCLST</td>
+<td align="left">739.534598 h2*mg/L</td>
+<td align="left">739.5346 h2*mg/L</td>
+</tr>
+<tr class="even">
+<td align="left">AUMCIFO</td>
+<td align="left">1298.115755 h2*mg/L</td>
+<td align="left">1298.1158 h2*mg/L</td>
+</tr>
+<tr class="odd">
+<td align="left">AUMCIFP</td>
+<td align="left">1288.520116 h2*mg/L</td>
+<td align="left">1288.5201 h2*mg/L</td>
+</tr>
+<tr class="even">
+<td align="left">AUMCPEO</td>
+<td align="left">43.03%</td>
+<td align="left">43.03%</td>
+</tr>
+<tr class="odd">
+<td align="left">AUMCPEP</td>
+<td align="left">42.61%</td>
+<td align="left">42.61%</td>
+</tr>
+<tr class="even">
+<td align="left">VZFO</td>
+<td align="left">37.81050811 L</td>
+<td align="left">37.8105 L</td>
+</tr>
+<tr class="odd">
+<td align="left">VZFP</td>
+<td align="left">37.90668616 L</td>
+<td align="left">37.9067 L</td>
+</tr>
+<tr class="even">
+<td align="left">CLFO</td>
+<td align="left">3.079686301 L/h</td>
+<td align="left">3.0797 L/h</td>
+</tr>
+<tr class="odd">
+<td align="left">CLFP</td>
+<td align="left">3.087520055 L/h</td>
+<td align="left">3.0875 L/h</td>
+</tr>
+<tr class="even">
+<td align="left">MRTEVLST</td>
+<td align="left">8.35066639 h</td>
+<td align="left">8.3507 h</td>
+</tr>
+<tr class="odd">
+<td align="left">MRTEVIFO</td>
+<td align="left">12.49309159 h</td>
+<td align="left">12.4931 h</td>
+</tr>
+<tr class="even">
+<td align="left">MRTEVIFP</td>
+<td align="left">12.43228656 h</td>
+<td align="left">12.4323 h</td>
+</tr>
+</tbody>
+</table>
+<p>In order to further validate these packages, we compared NCA results using Indometh, another available dataset of the R software as well as other datasets of a number of subjects from several phase 1 clinical trials with different dosing routes such as infusion, bolus, and oral route. As a result, we could not find any discrepancy between outputs generated by the R packages and WinNonlin®.</p>
 </div>
-<h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-acharya">
-<p>Acharya, Chayan, Andrew C Hooker, Gülbeyaz Yildiz Türkyilmaz, Siv Jönsson, and Mats O Karlsson. 2016. “A Diagnostic Tool for Population Models Using Non-Compartmental Analysis: The Ncappc Package for R.” <em>Computer Methods and Programs in Biomedicine</em> 127. Elsevier: 83–93.</p>
-</div>
-<div id="ref-gab">
-<p>Gabrielsson, Johan. 2016. <em>Pharmacokinetic and Pharmacodynamic Data Analysis : Concepts and Applications</em>. Stockholm: Apotekarsocieteten.</p>
-</div>
-<div id="ref-R-base">
-<p>R Core Team. 2017. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/" class="uri">https://www.R-project.org/</a>.</p>
-</div>
-<div id="ref-R-NonCompart">
-<p>Bae, Kyun-Seop. 2017b. <em>NonCompart: Noncompartmental Analysis for Pharmacokinetic Data</em>. <a href="https://CRAN.R-project.org/package=NonCompart" class="uri">https://CRAN.R-project.org/package=NonCompart</a>.</p>
-</div>
-<div id="ref-R-ncar">
-<p>Bae, Kyun-Seop. 2017a. <em>Ncar: Noncompartmental Analysis for Pharmacokinetic Report</em>. <a href="https://CRAN.R-project.org/package=ncar" class="uri">https://CRAN.R-project.org/package=ncar</a>.</p>
-</div>
-</div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="acknowledgements.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ncar-package-generation-of-nca-reports.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="discussion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -195,7 +358,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown/edit/master/inst/examples/10-introduction.Rmd",
+"link": "https://github.com/rstudio/bookdown/edit/master/inst/examples/30-results.Rmd",
 "text": "Edit"
 },
 "download": ["book-ncar-en.pdf", "book-ncar-en.epub", "book-ncar-en.mobi"],

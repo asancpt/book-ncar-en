@@ -32,7 +32,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="results.html">
+<link rel="prev" href="validation-of-nca-results-between-r-packages-and-winnonlin.html">
 <link rel="next" href="environment.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -104,14 +104,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>2</b> Methods</a><ul>
-<li class="chapter" data-level="2.1" data-path="methods.html"><a href="methods.html#r-packages-noncompart-and-ncar"><i class="fa fa-check"></i><b>2.1</b> R packages (NonCompart and ncar)</a></li>
-<li class="chapter" data-level="2.2" data-path="methods.html"><a href="methods.html#software"><i class="fa fa-check"></i><b>2.2</b> Software</a></li>
-<li class="chapter" data-level="2.3" data-path="methods.html"><a href="methods.html#dataset"><i class="fa fa-check"></i><b>2.3</b> Dataset</a></li>
+<li class="chapter" data-level="2.1" data-path="r-packages-noncompart-and-ncar.html"><a href="r-packages-noncompart-and-ncar.html"><i class="fa fa-check"></i><b>2.1</b> R packages (NonCompart and ncar)</a></li>
+<li class="chapter" data-level="2.2" data-path="software.html"><a href="software.html"><i class="fa fa-check"></i><b>2.2</b> Software</a></li>
+<li class="chapter" data-level="2.3" data-path="dataset.html"><a href="dataset.html"><i class="fa fa-check"></i><b>2.3</b> Dataset</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>3</b> Results</a><ul>
-<li class="chapter" data-level="3.1" data-path="results.html"><a href="results.html#noncompart-package-performance-of-nca"><i class="fa fa-check"></i><b>3.1</b> NonCompart package: performance of NCA</a></li>
-<li class="chapter" data-level="3.2" data-path="results.html"><a href="results.html#ncar-package-generation-of-nca-reports"><i class="fa fa-check"></i><b>3.2</b> ncar package: generation of NCA reports</a></li>
-<li class="chapter" data-level="3.3" data-path="results.html"><a href="results.html#validation-of-nca-results-between-r-packages-and-winnonlin"><i class="fa fa-check"></i><b>3.3</b> Validation of NCA results between R packages and WinNonlin®</a></li>
+<li class="chapter" data-level="3.1" data-path="noncompart-package-performance-of-nca.html"><a href="noncompart-package-performance-of-nca.html"><i class="fa fa-check"></i><b>3.1</b> NonCompart package: performance of NCA</a></li>
+<li class="chapter" data-level="3.2" data-path="ncar-package-generation-of-nca-reports.html"><a href="ncar-package-generation-of-nca-reports.html"><i class="fa fa-check"></i><b>3.2</b> ncar package: generation of NCA reports</a></li>
+<li class="chapter" data-level="3.3" data-path="validation-of-nca-results-between-r-packages-and-winnonlin.html"><a href="validation-of-nca-results-between-r-packages-and-winnonlin.html"><i class="fa fa-check"></i><b>3.3</b> Validation of NCA results between R packages and WinNonlin®</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="discussion.html"><a href="discussion.html"><i class="fa fa-check"></i><b>4</b> Discussion</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
@@ -136,7 +136,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="discussion" class="section level1">
 <h1><span class="header-section-number">Chapter 4</span> Discussion</h1>
-<p>We developed two R packages─NonCompart and ncar for NCA. Through these packages, we aimed to imple ment the fol- lowing functionalities for performing NCA: 1) CDISC SDTM terms; 2) automatic slope selection with the same criterion of WinNonlin®; 3) supporting both ‘linear-up linear-down’ and ‘linear-up log-down’ method; and 4) interval (partial) AUCs with ‘linear’ or ‘log’ interpolation method. These packages are convenient and efficient because they enable prepara- tion of data and NCA as well as generation of reports includ- ing plots together in R software. As shown in Figure 2B, the NCA plot allows for automatic slope selection, however, it is not possible to manually choose the points used for calculating ter- minal slope. In addition, any error or change can easily be fixed, and users may choose calculation methods between linear and logarithmic, which support ‘linear-up linear-down’ and ‘linear- up log-down’ method, respectively. Our results showed that our R packages meet the aforementioned objectives. Since the PPTESTCD of SDTM is used in the R packages, it is helpful to construct PP domain. In the present practice, one has to change variables from WinNonlin® one by one, which is an especially difficult task for those without specific knowledge on SDTM. A number of packages can perform NCA, but no package─even commercial softwares─can give outputs in the format of SDTM or receive SDTM-formatted input data. It is important to ensure that the reports are legible to sponsors and regulatory bodies by generating a consistent and systematic re- sult, as well as the exact results of NCA. As shown in Table 3, comparison of NCA results obtained by WinNonlin® and ncar package (including another package) showed no significant discrepancies. These two R packages are fast and easy-to-use tool-set that can successfully perform NCA with concentration–time data. Specifically, the ncar package can produce a comprehensive set of graphical and tabular outputs that summarize the NCA results, which is a complete report in pdf or rtf format. Our two newly-developed packages are free and open-source, so they can be used to develop other useful packages as well. We hope that NonCompart and ncar packages will enable researchers to easily perform NCA, and contribute to facilitation of drug discovery process.</p>
+<p>We developed two R packages - NonCompart and ncar for NCA. Through these packages, we aimed to imple ment the following functionalities for performing NCA: 1) CDISC SDTM terms; 2) automatic slope selection with the same criterion of WinNonlin®; 3) supporting both ‘linear-up linear-down’ and ‘linear-up log-down’ method; and 4) interval (partial) AUCs with ‘linear’ or ‘log’ interpolation method. These packages are convenient and efficient because they enable prepara- tion of data and NCA as well as generation of reports includ- ing plots together in R software. As shown in Figure 2B, the NCA plot allows for automatic slope selection, however, it is not possible to manually choose the points used for calculating ter- minal slope. In addition, any error or change can easily be fixed, and users may choose calculation methods between linear and logarithmic, which support ‘linear-up linear-down’ and ‘linear- up log-down’ method, respectively. Our results showed that our R packages meet the aforementioned objectives. Since the PPTESTCD of SDTM is used in the R packages, it is helpful to construct PP domain. In the present practice, one has to change variables from WinNonlin® one by one, which is an especially difficult task for those without specific knowledge on SDTM. A number of packages can perform NCA, but no package-even commercial softwares-can give outputs in the format of SDTM or receive SDTM-formatted input data. It is important to ensure that the reports are legible to sponsors and regulatory bodies by generating a consistent and systematic re- sult, as well as the exact results of NCA. As shown in Table 3, comparison of NCA results obtained by WinNonlin® and ncar package (including another package) showed no significant discrepancies. These two R packages are fast and easy-to-use tool-set that can successfully perform NCA with concentration–time data. Specifically, the ncar package can produce a comprehensive set of graphical and tabular outputs that summarize the NCA results, which is a complete report in pdf or rtf format. Our two newly-developed packages are free and open-source, so they can be used to develop other useful packages as well. We hope that NonCompart and ncar packages will enable researchers to easily perform NCA, and contribute to facilitation of drug discovery process.</p>
 
 </div>
 
@@ -147,7 +147,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="results.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="validation-of-nca-results-between-r-packages-and-winnonlin.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="environment.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -162,8 +162,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
-"facebook": true,
+"github": true,
+"facebook": false,
 "twitter": true,
 "google": false,
 "linkedin": false,
@@ -178,12 +178,12 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/rstudio/bookdown/edit/master/inst/examples/30-results.Rmd",
+"text": "Edit"
 },
-"download": null,
+"download": ["book-ncar-en.pdf", "book-ncar-en.epub", "book-ncar-en.mobi"],
 "toc": {
-"collapse": "subsection"
+"collapse": "none"
 }
 });
 });

@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="acknowledgements.html">
-<link rel="next" href="methods.html">
+<link rel="prev" href="results.html">
+<link rel="next" href="ncar-package-generation-of-nca-reports.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -134,38 +134,27 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
-<p>The aim of pharmacokinetics (PK) studies is to examine the kinetics of a drug with regard to absorption, distribution, metabolism and elimination in the body. PK data analysis consists of noncompartmental analysis (NCA) and nonlinear regression analysis. <span class="citation">(Acharya et al. <a href="#ref-acharya">2016</a>; Gabrielsson <a href="#ref-gab">2016</a>)</span> NCA uses the trapezoidal rule for measurement of area under the concentration-time curve (AUC), and requires fewer assumptions than model-based analysis. <span class="citation">(Gabrielsson <a href="#ref-gab">2016</a>)</span> NCA allows for estimation of various PK parameters such as AUC, peak observed drug concentration (C<sub>max</sub>), time of peak concentration (T<sub>max</sub>), and elimination half-life. Particularly, AUC and C<sub>max</sub> are often accepted as the criteria for approval of bioequivalent drugs.</p>
-<p>R, a widely-used computer language, is a suite of libraries of statistical and mathematical computations. <span class="citation">(R Core Team <a href="#ref-R-base">2017</a>)</span> Despite its relatively small base system compared with other commercial softwares for NCA such as WinNonlin®[4] and Kinetica,[5] R has robust functions for scientific computation and numerous add-in packages for use in various fields. [6] Therefore, many efforts are being made to replace commercial softwares with R packages.</p>
-<p>In this article, we introduce two newly-developed R packages, NonCompart <span class="citation">(Bae <a href="#ref-R-NonCompart">2017</a><a href="#ref-R-NonCompart">b</a>)</span> and ncar <span class="citation">(Bae <a href="#ref-R-ncar">2017</a><a href="#ref-R-ncar">a</a>)</span>, that are compatible with SDTM (Study Data Tabulation Model)-formatted dataset of CDISC (Clinical Data Interchange Standards Consortium), which is the standard of documentation submitted to regulatory authorities,[7] while providing a practical method for producing complete NCA reports.</p>
-
-</div>
-<h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-acharya">
-<p>Acharya, Chayan, Andrew C Hooker, Gülbeyaz Yildiz Türkyilmaz, Siv Jönsson, and Mats O Karlsson. 2016. “A Diagnostic Tool for Population Models Using Non-Compartmental Analysis: The Ncappc Package for R.” <em>Computer Methods and Programs in Biomedicine</em> 127. Elsevier: 83–93.</p>
-</div>
-<div id="ref-gab">
-<p>Gabrielsson, Johan. 2016. <em>Pharmacokinetic and Pharmacodynamic Data Analysis : Concepts and Applications</em>. Stockholm: Apotekarsocieteten.</p>
-</div>
-<div id="ref-R-base">
-<p>R Core Team. 2017. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/" class="uri">https://www.R-project.org/</a>.</p>
-</div>
-<div id="ref-R-NonCompart">
-<p>Bae, Kyun-Seop. 2017b. <em>NonCompart: Noncompartmental Analysis for Pharmacokinetic Data</em>. <a href="https://CRAN.R-project.org/package=NonCompart" class="uri">https://CRAN.R-project.org/package=NonCompart</a>.</p>
-</div>
-<div id="ref-R-ncar">
-<p>Bae, Kyun-Seop. 2017a. <em>Ncar: Noncompartmental Analysis for Pharmacokinetic Report</em>. <a href="https://CRAN.R-project.org/package=ncar" class="uri">https://CRAN.R-project.org/package=ncar</a>.</p>
-</div>
+<div id="noncompart-package-performance-of-nca" class="section level2">
+<h2><span class="header-section-number">3.1</span> NonCompart package: performance of NCA</h2>
+<p>This package conducts NCA as similarly as possible to the most widely used commercial PK analysis software. The NonCompart package has two main functions, tblNCA and sNCA, for use in multiple subjects and one subject, respectively. Figure 1 shows an example of output by tblNCA. The input data for tblNCA( ) should be in a long format as exemplified by the Theoph dataset. It is possible to input several keys such as subject demographics and information regarding dose, period, or sequence; the result of tblNCA( ) will print the key columns and the carried keys can be further used for additional statistical analysis (i.e. descriptive statistics, bioequivalence test, t-test, or ANOVA). The adm argument can be ‘Extravascular’, ‘Bolus’, or ‘Infusion’ and the down argument can be either ‘Linear’ or ‘Log’. The greatest advantage of this package is that the outputs produced by this package are compatible with those of pharmacokinetic parameter (PP) TESTCD of CDISC SDTM.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tblNCA</span>(Theoph, <span class="dt">key =</span> <span class="st">&quot;Subject&quot;</span>, <span class="dt">colTime =</span> <span class="st">&quot;Time&quot;</span>, <span class="dt">colConc =</span> <span class="st">&quot;conc&quot;</span>, <span class="dt">dose =</span> <span class="dv">320</span>, 
+       <span class="dt">adm =</span> <span class="st">&quot;Extravascular&quot;</span>, <span class="dt">dur =</span> <span class="dv">0</span>, <span class="dt">doseUnit =</span> <span class="st">&quot;mg&quot;</span>, <span class="dt">timeUnit =</span> <span class="st">&quot;h&quot;</span>, <span class="dt">concUnit =</span> <span class="st">&quot;mg/L&quot;</span>, 
+       <span class="dt">down =</span> <span class="st">&quot;Linear&quot;</span>)</code></pre></div>
+<p>IntAUC() function calculates interval (partial) AUC (from t 1 and t 2 ) with the given series of time and concentration. The interval AUC (0.5–11 hour) of the subject 8 can be calculated using the Theoph dataset with the following R script.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Time =<span class="st"> </span>Theoph[Theoph<span class="op">$</span>Subject <span class="op">==</span><span class="st"> </span><span class="dv">8</span>, <span class="st">&quot;Time&quot;</span>]
+Concentration =<span class="st"> </span>Theoph[Theoph<span class="op">$</span>Subject <span class="op">==</span><span class="st"> </span><span class="dv">8</span>, <span class="st">&quot;conc&quot;</span>]
+Res =<span class="st"> </span><span class="kw">sNCA</span>(Time, Concentration,<span class="dt">dose =</span> <span class="dv">320</span>, <span class="dt">concUnit =</span> <span class="st">&quot;mg/L&quot;</span>)
+<span class="kw">IntAUC</span>(Time, Concentration, <span class="dt">t1 =</span> <span class="fl">0.5</span>, <span class="dt">t2 =</span> <span class="dv">11</span>, Res)</code></pre></div>
+<pre><code>## [1] 58.26022</code></pre>
+<!-- # [1] 58.26022 -->
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="acknowledgements.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="results.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ncar-package-generation-of-nca-reports.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -195,7 +184,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown/edit/master/inst/examples/10-introduction.Rmd",
+"link": "https://github.com/rstudio/bookdown/edit/master/inst/examples/30-results.Rmd",
 "text": "Edit"
 },
 "download": ["book-ncar-en.pdf", "book-ncar-en.epub", "book-ncar-en.mobi"],

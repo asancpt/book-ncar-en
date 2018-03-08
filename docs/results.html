@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="methods.html">
-<link rel="next" href="discussion.html">
+<link rel="prev" href="dataset.html">
+<link rel="next" href="noncompart-package-performance-of-nca.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -104,14 +104,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>2</b> Methods</a><ul>
-<li class="chapter" data-level="2.1" data-path="methods.html"><a href="methods.html#r-packages-noncompart-and-ncar"><i class="fa fa-check"></i><b>2.1</b> R packages (NonCompart and ncar)</a></li>
-<li class="chapter" data-level="2.2" data-path="methods.html"><a href="methods.html#software"><i class="fa fa-check"></i><b>2.2</b> Software</a></li>
-<li class="chapter" data-level="2.3" data-path="methods.html"><a href="methods.html#dataset"><i class="fa fa-check"></i><b>2.3</b> Dataset</a></li>
+<li class="chapter" data-level="2.1" data-path="r-packages-noncompart-and-ncar.html"><a href="r-packages-noncompart-and-ncar.html"><i class="fa fa-check"></i><b>2.1</b> R packages (NonCompart and ncar)</a></li>
+<li class="chapter" data-level="2.2" data-path="software.html"><a href="software.html"><i class="fa fa-check"></i><b>2.2</b> Software</a></li>
+<li class="chapter" data-level="2.3" data-path="dataset.html"><a href="dataset.html"><i class="fa fa-check"></i><b>2.3</b> Dataset</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>3</b> Results</a><ul>
-<li class="chapter" data-level="3.1" data-path="results.html"><a href="results.html#noncompart-package-performance-of-nca"><i class="fa fa-check"></i><b>3.1</b> NonCompart package: performance of NCA</a></li>
-<li class="chapter" data-level="3.2" data-path="results.html"><a href="results.html#ncar-package-generation-of-nca-reports"><i class="fa fa-check"></i><b>3.2</b> ncar package: generation of NCA reports</a></li>
-<li class="chapter" data-level="3.3" data-path="results.html"><a href="results.html#validation-of-nca-results-between-r-packages-and-winnonlin"><i class="fa fa-check"></i><b>3.3</b> Validation of NCA results between R packages and WinNonlin®</a></li>
+<li class="chapter" data-level="3.1" data-path="noncompart-package-performance-of-nca.html"><a href="noncompart-package-performance-of-nca.html"><i class="fa fa-check"></i><b>3.1</b> NonCompart package: performance of NCA</a></li>
+<li class="chapter" data-level="3.2" data-path="ncar-package-generation-of-nca-reports.html"><a href="ncar-package-generation-of-nca-reports.html"><i class="fa fa-check"></i><b>3.2</b> ncar package: generation of NCA reports</a></li>
+<li class="chapter" data-level="3.3" data-path="validation-of-nca-results-between-r-packages-and-winnonlin.html"><a href="validation-of-nca-results-between-r-packages-and-winnonlin.html"><i class="fa fa-check"></i><b>3.3</b> Validation of NCA results between R packages and WinNonlin®</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="discussion.html"><a href="discussion.html"><i class="fa fa-check"></i><b>4</b> Discussion</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
@@ -135,225 +135,15 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="results" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> Results</h1>
-<div id="noncompart-package-performance-of-nca" class="section level2">
-<h2><span class="header-section-number">3.1</span> NonCompart package: performance of NCA</h2>
-<p>This package conducts NCA as similarly as possible to the most widely used commercial PK analysis software. The NonCompart package has two main functions, tblNCA and sNCA, for use in multiple subjects and one subject, respectively. Figure 1 shows an example of output by tblNCA. The input data for tblNCA( ) should be in a long format as exemplified by the Theoph dataset. It is possible to input several keys such as subject demographics and information regarding dose, period, or sequence; the result of tblNCA( ) will print the key columns and the carried keys can be further used for additional statistical analysis (i.e. descriptive statistics, bioequivalence test, t-test, or ANOVA). The adm argument can be ‘Extravascular’, ‘Bolus’, or ‘Infusion’ and the down argument can be either ‘Linear’ or ‘Log’. The greatest advantage of this package is that the outputs produced by this package are compatible with those of pharmacokinetic parameter (PP) TESTCD of CDISC SDTM.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tblNCA</span>(Theoph, <span class="dt">key =</span> <span class="st">&quot;Subject&quot;</span>, <span class="dt">colTime =</span> <span class="st">&quot;Time&quot;</span>, <span class="dt">colConc =</span> <span class="st">&quot;conc&quot;</span>, <span class="dt">dose =</span> <span class="dv">320</span>, 
-       <span class="dt">adm =</span> <span class="st">&quot;Extravascular&quot;</span>, <span class="dt">dur =</span> <span class="dv">0</span>, <span class="dt">doseUnit =</span> <span class="st">&quot;mg&quot;</span>, <span class="dt">timeUnit =</span> <span class="st">&quot;h&quot;</span>, <span class="dt">concUnit =</span> <span class="st">&quot;mg/L&quot;</span>, 
-       <span class="dt">down =</span> <span class="st">&quot;Linear&quot;</span>)</code></pre></div>
-<p>IntAUC() function calculates interval (partial) AUC (from t 1 and t 2 ) with the given series of time and concentration. The interval AUC (0.5–11 hour) of the subject 8 can be calculated using the Theoph dataset with the following R script.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Time =<span class="st"> </span>Theoph[Theoph<span class="op">$</span>Subject <span class="op">==</span><span class="st"> </span><span class="dv">8</span>, <span class="st">&quot;Time&quot;</span>]
-Concentration =<span class="st"> </span>Theoph[Theoph<span class="op">$</span>Subject <span class="op">==</span><span class="st"> </span><span class="dv">8</span>, <span class="st">&quot;conc&quot;</span>]
-Res =<span class="st"> </span><span class="kw">sNCA</span>(Time, Concentration,<span class="dt">dose =</span> <span class="dv">320</span>, <span class="dt">concUnit =</span> <span class="st">&quot;mg/L&quot;</span>)
-<span class="kw">IntAUC</span>(Time, Concentration, <span class="dt">t1 =</span> <span class="fl">0.5</span>, <span class="dt">t2 =</span> <span class="dv">11</span>, Res)</code></pre></div>
-<pre><code>## [1] 58.26022</code></pre>
-<!-- # [1] 58.26022 -->
-</div>
-<div id="ncar-package-generation-of-nca-reports" class="section level2">
-<h2><span class="header-section-number">3.2</span> ncar package: generation of NCA reports</h2>
-<p>This package generates complete NCA reports including plots with both linear and logarithmic scale. Its two main functions are pdfNCA and rtfNCA, which produce pdf file format and rtf file format, respectively. The generated reports are similar to those generated from commercial softwares, but like NonCompart, this package has the advantage of using PPTESTCD of CDISC SDTM. ncar produces NCA reports through NonCompart and converts them into Microsoft Word format when using rtfNCA( ), which is convenient for editing. Re- ports generated by pdfNCA( )function show individual plots with trend lines that joins the dots used for calculating terminal slopes. Figure 2 shows an example of an NCA report in pdf for- mat and an individual concentration-time plot.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pdfNCA</span>(<span class="dt">fileName =</span> <span class="st">&quot;pdfNCA-Theoph.pdf&quot;</span>,
-Theoph, <span class="dt">colSubj =</span> <span class="st">&quot;Subject&quot;</span>, <span class="dt">colTime =</span>
-<span class="st">&quot;Time&quot;</span>, <span class="dt">colConc =</span> <span class="st">&quot;conc&quot;</span>, <span class="dt">dose =</span> <span class="dv">320</span>,
-<span class="dt">doseUnit =</span> <span class="st">&quot;mg&quot;</span>, <span class="dt">timeUnit =</span> <span class="st">&quot;h&quot;</span>, concU<span class="op">-</span>
-<span class="dt">nit =</span> <span class="st">&quot;mg/L&quot;</span>, <span class="dt">down =</span> <span class="st">&quot;Linear&quot;</span>)</code></pre></div>
-</div>
-<div id="validation-of-nca-results-between-r-packages-and-winnonlin" class="section level2">
-<h2><span class="header-section-number">3.3</span> Validation of NCA results between R packages and WinNonlin®</h2>
-<p>To demonstrate the accordance of outputs by ncar package and WinNonlin®, we performed NCA using Theoph dataset ob- tained from the R software. For comparison of the NCA results, we selected the following conditions: extravascular, linear-up linear-down, and best fit. We found no discrepancy between the two results as shown in Table <a href="methods.html#tab:table2">2.2</a> (a randomized subject, Subject ID = 8).</p>
-<table>
-<caption><span id="tab:table3">Table 3.1: </span>Comparison of NCA results generated from WinNonlin and ncar package</caption>
-<thead>
-<tr class="header">
-<th align="left">Parameter</th>
-<th align="left">WinNonlin</th>
-<th align="left">ncar</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">CMAX</td>
-<td align="left">7.56 mg/L</td>
-<td align="left">7.5600 mg/L</td>
-</tr>
-<tr class="even">
-<td align="left">CMAXD</td>
-<td align="left">0.023625 mg/L/mg</td>
-<td align="left">0.0236 mg/L/mg</td>
-</tr>
-<tr class="odd">
-<td align="left">TMAX</td>
-<td align="left">2.02 h</td>
-<td align="left">2.0200 h</td>
-</tr>
-<tr class="even">
-<td align="left">TLAG</td>
-<td align="left">0 h</td>
-<td align="left">0.0000 h</td>
-</tr>
-<tr class="odd">
-<td align="left">CLST</td>
-<td align="left">1.25 mg/L</td>
-<td align="left">1.2500 mg/L</td>
-</tr>
-<tr class="even">
-<td align="left">TLST</td>
-<td align="left">24.12 h</td>
-<td align="left">24.1200 h</td>
-</tr>
-<tr class="odd">
-<td align="left">LAMZHL</td>
-<td align="left">8.510037883 h</td>
-<td align="left">8.5100 h</td>
-</tr>
-<tr class="even">
-<td align="left">LAMZ</td>
-<td align="left">0.08145054 /h</td>
-<td align="left">0.0815 /h</td>
-</tr>
-<tr class="odd">
-<td align="left">LAMZLL</td>
-<td align="left">3.53 h</td>
-<td align="left">3.5300 h</td>
-</tr>
-<tr class="even">
-<td align="left">LAMZUL</td>
-<td align="left">24.12 h</td>
-<td align="left">24.1200 h</td>
-</tr>
-<tr class="odd">
-<td align="left">LAMZNPT</td>
-<td align="left">6</td>
-<td align="left">6</td>
-</tr>
-<tr class="even">
-<td align="left">CORRXY</td>
-<td align="left">-0.995496053</td>
-<td align="left">-0.9955</td>
-</tr>
-<tr class="odd">
-<td align="left">R2</td>
-<td align="left">0.991012391</td>
-<td align="left">0.991</td>
-</tr>
-<tr class="even">
-<td align="left">R2ADJ</td>
-<td align="left">0.988765489</td>
-<td align="left">0.9888</td>
-</tr>
-<tr class="odd">
-<td align="left">AUCLST</td>
-<td align="left">88.55995 h*mg/L</td>
-<td align="left">88.5600 h*mg/L</td>
-</tr>
-<tr class="even">
-<td align="left">AUCALL</td>
-<td align="left">88.55995 h*mg/L</td>
-<td align="left">88.5600 h*mg/L</td>
-</tr>
-<tr class="odd">
-<td align="left">AUCIFO</td>
-<td align="left">103.906687 h*mg/L</td>
-<td align="left">103.9067 h*mg/L</td>
-</tr>
-<tr class="even">
-<td align="left">AUCIFOD</td>
-<td align="left">0.324708 h*mg/L/mg</td>
-<td align="left">0.3247 h*mg/L/mg</td>
-</tr>
-<tr class="odd">
-<td align="left">AUCIFP</td>
-<td align="left">103.643051 h*mg/L</td>
-<td align="left">103.6431 h*mg/L</td>
-</tr>
-<tr class="even">
-<td align="left">AUCIFP</td>
-<td align="left">0.323884 h*mg/L/mg</td>
-<td align="left">0.3239 h*mg/L/mg</td>
-</tr>
-<tr class="odd">
-<td align="left">AUCPEO</td>
-<td align="left">14.77%</td>
-<td align="left">14.77%</td>
-</tr>
-<tr class="even">
-<td align="left">AUCPEP</td>
-<td align="left">14.55%</td>
-<td align="left">14.55%</td>
-</tr>
-<tr class="odd">
-<td align="left">AUMCLST</td>
-<td align="left">739.534598 h2*mg/L</td>
-<td align="left">739.5346 h2*mg/L</td>
-</tr>
-<tr class="even">
-<td align="left">AUMCIFO</td>
-<td align="left">1298.115755 h2*mg/L</td>
-<td align="left">1298.1158 h2*mg/L</td>
-</tr>
-<tr class="odd">
-<td align="left">AUMCIFP</td>
-<td align="left">1288.520116 h2*mg/L</td>
-<td align="left">1288.5201 h2*mg/L</td>
-</tr>
-<tr class="even">
-<td align="left">AUMCPEO</td>
-<td align="left">43.03%</td>
-<td align="left">43.03%</td>
-</tr>
-<tr class="odd">
-<td align="left">AUMCPEP</td>
-<td align="left">42.61%</td>
-<td align="left">42.61%</td>
-</tr>
-<tr class="even">
-<td align="left">VZFO</td>
-<td align="left">37.81050811 L</td>
-<td align="left">37.8105 L</td>
-</tr>
-<tr class="odd">
-<td align="left">VZFP</td>
-<td align="left">37.90668616 L</td>
-<td align="left">37.9067 L</td>
-</tr>
-<tr class="even">
-<td align="left">CLFO</td>
-<td align="left">3.079686301 L/h</td>
-<td align="left">3.0797 L/h</td>
-</tr>
-<tr class="odd">
-<td align="left">CLFP</td>
-<td align="left">3.087520055 L/h</td>
-<td align="left">3.0875 L/h</td>
-</tr>
-<tr class="even">
-<td align="left">MRTEVLST</td>
-<td align="left">8.35066639 h</td>
-<td align="left">8.3507 h</td>
-</tr>
-<tr class="odd">
-<td align="left">MRTEVIFO</td>
-<td align="left">12.49309159 h</td>
-<td align="left">12.4931 h</td>
-</tr>
-<tr class="even">
-<td align="left">MRTEVIFP</td>
-<td align="left">12.43228656 h</td>
-<td align="left">12.4323 h</td>
-</tr>
-</tbody>
-</table>
-<p>In order to further validate these packages, we compared NCA results using Indometh, another available dataset of the R software as well as other datasets of a number of subjects from several phase 1 clinical trials with different dosing routes such as infusion, bolus, and oral route. As a result, we could not find any discrepancy between outputs generated by the R packages and WinNonlin®.</p>
-</div>
+<h1><span class="header-section-number">Chapter 3</span> Results</h1> 
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="methods.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="discussion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="dataset.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="noncompart-package-performance-of-nca.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -367,8 +157,8 @@ Theoph, <span class="dt">colSubj =</span> <span class="st">&quot;Subject&quot;</
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
-"facebook": true,
+"github": true,
+"facebook": false,
 "twitter": true,
 "google": false,
 "linkedin": false,
@@ -383,12 +173,12 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/rstudio/bookdown/edit/master/inst/examples/30-results.Rmd",
+"text": "Edit"
 },
-"download": null,
+"download": ["book-ncar-en.pdf", "book-ncar-en.epub", "book-ncar-en.mobi"],
 "toc": {
-"collapse": "subsection"
+"collapse": "none"
 }
 });
 });
