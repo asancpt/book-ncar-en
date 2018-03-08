@@ -4,8 +4,8 @@
 
 ```{r, echo = FALSE}
 pkgInfo <- lapply(pkg, packageDescription, fields = c("Package", "Version"))
-knitr::kable(data.frame(Package=sapply(pkgInfo, `[[`, 1), Version=sapply(pkgInfo, `[[`, 2)))
-devtools::session_info()
+kable(tibble(Package=sapply(pkgInfo, `[[`, 1), Version=sapply(pkgInfo, `[[`, 2)), booktabs = TRUE)
+# devtools::session_info()
 ```
 
 # References

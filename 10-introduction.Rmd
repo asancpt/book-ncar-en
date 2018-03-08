@@ -7,7 +7,7 @@ NCA allows for estimation of various PK parameters such as AUC, peak observed dr
 Particularly, AUC and C~max~ are often accepted as the criteria for approval of bioequivalent drugs.
 
 R, a widely-used computer language, is a suite of libraries of statistical and mathematical computations. [@R-base]
-Despite its relatively small base system compared with other commercial softwares for NCA such as WinNonlin®[4] and Kinetica,[5] R has robust functions for scientific computation and numerous add-in packages for use in various fields. [6] 
+Despite its relatively small base system compared with other commercial softwares for NCA such as WinNonlin®[4] and Kinetica,[5] R has robust functions for scientific computation and numerous add-in packages for use in various fields. [@kim2015r]
 Therefore, many efforts are being made to replace commercial softwares with R packages.
 
 In this article, we introduce two newly-developed R packages, NonCompart [@R-NonCompart] and ncar [@R-ncar], that are compatible with SDTM (Study Data Tabulation Model)-formatted dataset of CDISC (Clinical Data Interchange Standards Consortium), which is the standard of documentation submitted to regulatory authorities,[7] while providing a practical method for producing complete NCA reports.

@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="introduction.html">
-<link rel="next" href="r-packages-noncompart-and-ncar.html">
+<link rel="next" href="results.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -104,16 +104,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>2</b> Methods</a><ul>
-<li class="chapter" data-level="2.1" data-path="r-packages-noncompart-and-ncar.html"><a href="r-packages-noncompart-and-ncar.html"><i class="fa fa-check"></i><b>2.1</b> R packages (NonCompart and ncar)</a></li>
-<li class="chapter" data-level="2.2" data-path="software.html"><a href="software.html"><i class="fa fa-check"></i><b>2.2</b> Software</a></li>
-<li class="chapter" data-level="2.3" data-path="dataset.html"><a href="dataset.html"><i class="fa fa-check"></i><b>2.3</b> Dataset</a></li>
+<li class="chapter" data-level="2.1" data-path="methods.html"><a href="methods.html#r-packages-noncompart-and-ncar"><i class="fa fa-check"></i><b>2.1</b> R packages (NonCompart and ncar)</a></li>
+<li class="chapter" data-level="2.2" data-path="methods.html"><a href="methods.html#software"><i class="fa fa-check"></i><b>2.2</b> Software</a></li>
+<li class="chapter" data-level="2.3" data-path="methods.html"><a href="methods.html#dataset"><i class="fa fa-check"></i><b>2.3</b> Dataset</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>3</b> Results</a><ul>
-<li class="chapter" data-level="3.1" data-path="noncompart-package-performance-of-nca.html"><a href="noncompart-package-performance-of-nca.html"><i class="fa fa-check"></i><b>3.1</b> NonCompart package: performance of NCA</a></li>
-<li class="chapter" data-level="3.2" data-path="ncar-package-generation-of-nca-reports.html"><a href="ncar-package-generation-of-nca-reports.html"><i class="fa fa-check"></i><b>3.2</b> ncar package: generation of NCA reports</a></li>
-<li class="chapter" data-level="3.3" data-path="validation-of-nca-results-between-r-packages-and-winnonlin.html"><a href="validation-of-nca-results-between-r-packages-and-winnonlin.html"><i class="fa fa-check"></i><b>3.3</b> Validation of NCA results between R packages and WinNonlin®</a></li>
+<li class="chapter" data-level="3.1" data-path="results.html"><a href="results.html#noncompart-package-performance-of-nca"><i class="fa fa-check"></i><b>3.1</b> NonCompart package: performance of NCA</a></li>
+<li class="chapter" data-level="3.2" data-path="results.html"><a href="results.html#ncar-package-generation-of-nca-reports"><i class="fa fa-check"></i><b>3.2</b> ncar package: generation of NCA reports</a></li>
+<li class="chapter" data-level="3.3" data-path="results.html"><a href="results.html#validation-of-nca-results-between-r-packages-and-winnonlin"><i class="fa fa-check"></i><b>3.3</b> Validation of NCA results between R packages and WinNonlin®</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="discussion.html"><a href="discussion.html"><i class="fa fa-check"></i><b>4</b> Discussion</a></li>
+<li class="chapter" data-level="4" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>4</b> Conclusion</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="environment.html"><a href="environment.html"><i class="fa fa-check"></i><b>A</b> Environment</a></li>
 <li class="chapter" data-level="B" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>B</b> References</a></li>
@@ -135,7 +135,307 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="methods" class="section level1">
-<h1><span class="header-section-number">Chapter 2</span> Methods</h1> 
+<h1><span class="header-section-number">Chapter 2</span> Methods</h1>
+<div id="r-packages-noncompart-and-ncar" class="section level2">
+<h2><span class="header-section-number">2.1</span> R packages (NonCompart and ncar)</h2>
+<p>Two R packages (NonCompart and ncar) for NCA were developed in the open-source R programming language in order to allow free public use. R packages can be installed and loaded using the following scripts.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="kw">c</span>(<span class="st">&#39;NonCompart&#39;</span>, <span class="st">&#39;ncar&#39;</span>))
+<span class="kw">library</span>(NonCompart)
+<span class="kw">library</span>(ncar)</code></pre></div>
+<p>Detailed documentation and examples for each package can be found on the online user manual in the CRAN repository (<a href="http://cran.r-project.org/web/packages/NonCompart/index.html" class="uri">http://cran.r-project.org/web/packages/NonCompart/index.html</a>, <a href="http://cran.r-project.org/web/packages/ncar/index.html" class="uri">http://cran.r-project.org/web/packages/ncar/index.html</a>) or directly within the R console by entering ?function (e.g.?NonCompart,?ncar ). These two packages are implemented in R and can accept a set of input arguments that allow for generation of NCA output. The names of most NCA metrics estimated by the function of these packages are consistent with those used in WinNonlin®. (Table <a href="methods.html#tab:table1">2.1</a>)</p>
+<table>
+<caption><span id="tab:table1">Table 2.1: </span>Description of PK parameters of WinNonlin and the R packages</caption>
+<thead>
+<tr class="header">
+<th align="left">Parameter</th>
+<th align="left">WinNonlin</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">b0</td>
+<td align="left">b0</td>
+<td align="left">Intercept</td>
+</tr>
+<tr class="even">
+<td align="left">CMAX</td>
+<td align="left">Cmax</td>
+<td align="left">Max Concentration (Conc)</td>
+</tr>
+<tr class="odd">
+<td align="left">CMAXD</td>
+<td align="left">Cmax_D</td>
+<td align="left">Max Conc Norm by Dose</td>
+</tr>
+<tr class="even">
+<td align="left">TMAX</td>
+<td align="left">Tmax_D</td>
+<td align="left">Time of Cmax</td>
+</tr>
+<tr class="odd">
+<td align="left">TLAG</td>
+<td align="left">Tlag</td>
+<td align="left">Time Until First Nonzero Conc</td>
+</tr>
+<tr class="even">
+<td align="left">CLST</td>
+<td align="left">Clast</td>
+<td align="left">Last Nonzero Conc</td>
+</tr>
+<tr class="odd">
+<td align="left">CLSTP</td>
+<td align="left">Clast_pred</td>
+<td align="left">Last Nonzero Conc Pred</td>
+</tr>
+<tr class="even">
+<td align="left">TLST</td>
+<td align="left">Tlast</td>
+<td align="left">Time of Last Nonzero Conc</td>
+</tr>
+<tr class="odd">
+<td align="left">LAMZHL</td>
+<td align="left">HL_Lambda_z</td>
+<td align="left">Half-Life Lambda z</td>
+</tr>
+<tr class="even">
+<td align="left">LAMZ</td>
+<td align="left">Lambda_z</td>
+<td align="left">Lambda z</td>
+</tr>
+<tr class="odd">
+<td align="left">LAMZLL</td>
+<td align="left">Lambda_z</td>
+<td align="left">lower Lambda z Lower Limit</td>
+</tr>
+<tr class="even">
+<td align="left">LAMZUL</td>
+<td align="left">Lambda_z</td>
+<td align="left">upper Lambda z Upper Limit</td>
+</tr>
+<tr class="odd">
+<td align="left">LAMZNPT</td>
+<td align="left">No_points_Lambda_z</td>
+<td align="left">Number of Points for Lambda z</td>
+</tr>
+<tr class="even">
+<td align="left">CORRXY</td>
+<td align="left">Corr_XY</td>
+<td align="left">Correlation Between Time X and Log Conc Y</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">Rsq</td>
+<td align="left">R Squared</td>
+</tr>
+<tr class="even">
+<td align="left">R2ADJ</td>
+<td align="left">Rsq_adjusted</td>
+<td align="left">R Squared Adjusted</td>
+</tr>
+<tr class="odd">
+<td align="left">AUCLST</td>
+<td align="left">AUClast</td>
+<td align="left">AUC to Last Nonzero Conc</td>
+</tr>
+<tr class="even">
+<td align="left">AUCALL</td>
+<td align="left">AUCall</td>
+<td align="left">AUC All</td>
+</tr>
+<tr class="odd">
+<td align="left">AUCIFO</td>
+<td align="left">AUCINF_obs</td>
+<td align="left">AUC Infinity Obs</td>
+</tr>
+<tr class="even">
+<td align="left">AUCIFOD</td>
+<td align="left">AUCINF_D_obs</td>
+<td align="left">AUC Infinity Obs Norm by Dose</td>
+</tr>
+<tr class="odd">
+<td align="left">AUCIFP</td>
+<td align="left">AUCINF_Pred</td>
+<td align="left">AUC Infinity Pred</td>
+</tr>
+<tr class="even">
+<td align="left">AUCIFPD</td>
+<td align="left">AUCINF_D_pred</td>
+<td align="left">AUC Infinity Pred Norm by Dose</td>
+</tr>
+<tr class="odd">
+<td align="left">AUCPEO</td>
+<td align="left">AUC_Extrap_obs</td>
+<td align="left">AUC %Extrapolation Obs</td>
+</tr>
+<tr class="even">
+<td align="left">AUCPEP</td>
+<td align="left">AUC_Extrap_pred</td>
+<td align="left">AUC %Extrapolation Pred</td>
+</tr>
+<tr class="odd">
+<td align="left">AUMCLST</td>
+<td align="left">AUMClast</td>
+<td align="left">AUMC to Last Nonzero Conc</td>
+</tr>
+<tr class="even">
+<td align="left">AUMCIFO</td>
+<td align="left">AUMCINF_obs</td>
+<td align="left">AUMC Infinity Obs</td>
+</tr>
+<tr class="odd">
+<td align="left">AUMCIFP</td>
+<td align="left">AUMCINF_pred</td>
+<td align="left">AUMC Infinity Pred</td>
+</tr>
+<tr class="even">
+<td align="left">AUMCPEO</td>
+<td align="left">AUMC_Extrap_obs</td>
+<td align="left">AUMC %Extrapolation Obs</td>
+</tr>
+<tr class="odd">
+<td align="left">AUMCPEP</td>
+<td align="left">AUMC_Extrap_pred</td>
+<td align="left">AUMC % Extrapolation Pred</td>
+</tr>
+<tr class="even">
+<td align="left">VZFO</td>
+<td align="left">Vz_F_obs</td>
+<td align="left">Vz Obs by F</td>
+</tr>
+<tr class="odd">
+<td align="left">VZFP</td>
+<td align="left">Vz_F_p</td>
+<td align="left">Vz Pred by F</td>
+</tr>
+<tr class="even">
+<td align="left">CLFO</td>
+<td align="left">Cl_F_obs</td>
+<td align="left">Total CL Obs by F</td>
+</tr>
+<tr class="odd">
+<td align="left">CLFP</td>
+<td align="left">Cl_F_pred</td>
+<td align="left">Total CL Pred by F</td>
+</tr>
+<tr class="even">
+<td align="left">MRTEVLST</td>
+<td align="left">MRTlast</td>
+<td align="left">MRT Extravasc to Last Nonzero Conc</td>
+</tr>
+<tr class="odd">
+<td align="left">MRTEVIFO</td>
+<td align="left">MRTINF_obs</td>
+<td align="left">MRT Extravasc Infinity Obs</td>
+</tr>
+<tr class="even">
+<td align="left">MRTEVIFP</td>
+<td align="left">MRTINF_pred</td>
+<td align="left">MRT Extravasc Infinity Pred</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="software" class="section level2">
+<h2><span class="header-section-number">2.2</span> Software</h2>
+<p>WinNonlin® (Pharsight, Mountain View, CA, USA)[4] in Microsoft-Windows 7 (64 bit) was used for the computation. R 3.4.2 in Microsoft-Windows 7 (64 bit) was used for the comparison of calculated values.</p>
+</div>
+<div id="dataset" class="section level2">
+<h2><span class="header-section-number">2.3</span> Dataset</h2>
+<p>To compare the outputs generated by R packages and WinNonlin®, we used Theoph dataset obtained from the R software. The Theoph dataset has 132 observations from 12 subjects. A portion of the Theoph dataset (subject ID = 8) is shown in Table <a href="methods.html#tab:table2">2.2</a>.</p>
+<table>
+<caption><span id="tab:table2">Table 2.2: </span>Part of Theoph dataset with information on key (subject), time, and concentration</caption>
+<thead>
+<tr class="header">
+<th align="right">Subject</th>
+<th align="right">Weight (kg)</th>
+<th align="right">Dose (mg)</th>
+<th align="right">Time (h)</th>
+<th align="right">Concentration (mg/ml)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">8</td>
+<td align="right">70.5</td>
+<td align="right">4.53</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="right">70.5</td>
+<td align="right">4.53</td>
+<td align="right">0.25</td>
+<td align="right">3.05</td>
+</tr>
+<tr class="odd">
+<td align="right">8</td>
+<td align="right">70.5</td>
+<td align="right">4.53</td>
+<td align="right">0.52</td>
+<td align="right">3.05</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="right">70.5</td>
+<td align="right">4.53</td>
+<td align="right">0.98</td>
+<td align="right">7.31</td>
+</tr>
+<tr class="odd">
+<td align="right">8</td>
+<td align="right">70.5</td>
+<td align="right">4.53</td>
+<td align="right">2.02</td>
+<td align="right">7.56</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="right">70.5</td>
+<td align="right">4.53</td>
+<td align="right">3.53</td>
+<td align="right">6.59</td>
+</tr>
+<tr class="odd">
+<td align="right">8</td>
+<td align="right">70.5</td>
+<td align="right">4.53</td>
+<td align="right">5.05</td>
+<td align="right">5.88</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="right">70.5</td>
+<td align="right">4.53</td>
+<td align="right">7.15</td>
+<td align="right">4.73</td>
+</tr>
+<tr class="odd">
+<td align="right">8</td>
+<td align="right">70.5</td>
+<td align="right">4.53</td>
+<td align="right">9.05</td>
+<td align="right">4.57</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="right">70.5</td>
+<td align="right">4.53</td>
+<td align="right">12.10</td>
+<td align="right">3.00</td>
+</tr>
+<tr class="odd">
+<td align="right">8</td>
+<td align="right">70.5</td>
+<td align="right">4.53</td>
+<td align="right">24.12</td>
+<td align="right">1.25</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 </div>
             </section>
 
@@ -143,7 +443,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
         </div>
       </div>
 <a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="r-packages-noncompart-and-ncar.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="results.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -176,7 +476,7 @@ gitbook.start({
 "link": "https://github.com/rstudio/bookdown/edit/master/inst/examples/20-methods.Rmd",
 "text": "Edit"
 },
-"download": ["book-ncar-en.pdf", "book-ncar-en.epub", "book-ncar-en.mobi"],
+"download": ["book-ncar-en.pdf", "book-ncar-en.epub"],
 "toc": {
 "collapse": "none"
 }

@@ -183,8 +183,8 @@ statistical and mathematical computations. \citep{R-base} Despite its
 relatively small base system compared with other commercial softwares
 for NCA such as WinNonlin®{[}4{]} and Kinetica,{[}5{]} R has robust
 functions for scientific computation and numerous add-in packages for
-use in various fields. {[}6{]} Therefore, many efforts are being made to
-replace commercial softwares with R packages.
+use in various fields. \citep{kim2015r} Therefore, many efforts are
+being made to replace commercial softwares with R packages.
 
 In this article, we introduce two newly-developed R packages, NonCompart
 \citep{R-NonCompart} and ncar \citep{R-ncar}, that are compatible with
@@ -221,88 +221,55 @@ output. The names of most NCA metrics estimated by the function of these
 packages are consistent with those used in WinNonlin®. (Table
 \ref{tab:table1})
 
-\begin{table}
-
-\caption{\label{tab:table1}Description of PK parameters of WinNonlin and the R packages}
-\centering
-\begin{tabular}[t]{l|l|l}
-\hline
+\begin{longtable}[t]{lll}
+\caption{\label{tab:table1}Description of PK parameters of WinNonlin and the R packages}\\
+\toprule
 Parameter & WinNonlin & Description\\
-\hline
+\midrule
 b0 & b0 & Intercept\\
-\hline
 CMAX & Cmax & Max Concentration (Conc)\\
-\hline
 CMAXD & Cmax\_D & Max Conc Norm by Dose\\
-\hline
 TMAX & Tmax\_D & Time of Cmax\\
-\hline
 TLAG & Tlag & Time Until First Nonzero Conc\\
-\hline
+\addlinespace
 CLST & Clast & Last Nonzero Conc\\
-\hline
 CLSTP & Clast\_pred & Last Nonzero Conc Pred\\
-\hline
 TLST & Tlast & Time of Last Nonzero Conc\\
-\hline
 LAMZHL & HL\_Lambda\_z & Half-Life Lambda z\\
-\hline
 LAMZ & Lambda\_z & Lambda z\\
-\hline
+\addlinespace
 LAMZLL & Lambda\_z & lower Lambda z Lower Limit\\
-\hline
 LAMZUL & Lambda\_z & upper Lambda z Upper Limit\\
-\hline
 LAMZNPT & No\_points\_Lambda\_z & Number of Points for Lambda z\\
-\hline
 CORRXY & Corr\_XY & Correlation Between Time X and Log Conc Y\\
-\hline
 R2 & Rsq & R Squared\\
-\hline
+\addlinespace
 R2ADJ & Rsq\_adjusted & R Squared Adjusted\\
-\hline
 AUCLST & AUClast & AUC to Last Nonzero Conc\\
-\hline
 AUCALL & AUCall & AUC All\\
-\hline
 AUCIFO & AUCINF\_obs & AUC Infinity Obs\\
-\hline
 AUCIFOD & AUCINF\_D\_obs & AUC Infinity Obs Norm by Dose\\
-\hline
+\addlinespace
 AUCIFP & AUCINF\_Pred & AUC Infinity Pred\\
-\hline
 AUCIFPD & AUCINF\_D\_pred & AUC Infinity Pred Norm by Dose\\
-\hline
 AUCPEO & AUC\_Extrap\_obs & AUC \%Extrapolation Obs\\
-\hline
 AUCPEP & AUC\_Extrap\_pred & AUC \%Extrapolation Pred\\
-\hline
 AUMCLST & AUMClast & AUMC to Last Nonzero Conc\\
-\hline
+\addlinespace
 AUMCIFO & AUMCINF\_obs & AUMC Infinity Obs\\
-\hline
 AUMCIFP & AUMCINF\_pred & AUMC Infinity Pred\\
-\hline
 AUMCPEO & AUMC\_Extrap\_obs & AUMC \%Extrapolation Obs\\
-\hline
 AUMCPEP & AUMC\_Extrap\_pred & AUMC \% Extrapolation Pred\\
-\hline
 VZFO & Vz\_F\_obs & Vz Obs by F\\
-\hline
+\addlinespace
 VZFP & Vz\_F\_p & Vz Pred by F\\
-\hline
 CLFO & Cl\_F\_obs & Total CL Obs by F\\
-\hline
 CLFP & Cl\_F\_pred & Total CL Pred by F\\
-\hline
 MRTEVLST & MRTlast & MRT Extravasc to Last Nonzero Conc\\
-\hline
 MRTEVIFO & MRTINF\_obs & MRT Extravasc Infinity Obs\\
-\hline
 MRTEVIFP & MRTINF\_pred & MRT Extravasc Infinity Pred\\
-\hline
-\end{tabular}
-\end{table}
+\bottomrule
+\end{longtable}
 
 \section{Software}\label{software}
 
@@ -320,35 +287,25 @@ ID = 8) is shown in Table \ref{tab:table2}.
 
 \begin{table}
 
-\caption{\label{tab:table2}Part of Theoph dataset with information on key (subject),
-time, and concentration}
+\caption{\label{tab:table2}Part of Theoph dataset with information on key (subject), time, and concentration}
 \centering
-\begin{tabular}[t]{r|r|r|r|r}
-\hline
+\begin{tabular}[t]{rrrrr}
+\toprule
 Subject & Weight (kg) & Dose (mg) & Time (h) & Concentration (mg/ml)\\
-\hline
+\midrule
 8 & 70.5 & 4.53 & 0.00 & 0.00\\
-\hline
 8 & 70.5 & 4.53 & 0.25 & 3.05\\
-\hline
 8 & 70.5 & 4.53 & 0.52 & 3.05\\
-\hline
 8 & 70.5 & 4.53 & 0.98 & 7.31\\
-\hline
 8 & 70.5 & 4.53 & 2.02 & 7.56\\
-\hline
+\addlinespace
 8 & 70.5 & 4.53 & 3.53 & 6.59\\
-\hline
 8 & 70.5 & 4.53 & 5.05 & 5.88\\
-\hline
 8 & 70.5 & 4.53 & 7.15 & 4.73\\
-\hline
 8 & 70.5 & 4.53 & 9.05 & 4.57\\
-\hline
 8 & 70.5 & 4.53 & 12.10 & 3.00\\
-\hline
 8 & 70.5 & 4.53 & 24.12 & 1.25\\
-\hline
+\bottomrule
 \end{tabular}
 \end{table}
 
@@ -437,78 +394,51 @@ discrepancy between the two results as shown in Table \ref{tab:table2}
 
 \caption{\label{tab:table3}Comparison of NCA results generated from WinNonlin and ncar package}
 \centering
-\begin{tabular}[t]{l|l|l}
-\hline
+\begin{tabular}[t]{lll}
+\toprule
 Parameter & WinNonlin & ncar\\
-\hline
+\midrule
 CMAX & 7.56 mg/L & 7.5600 mg/L\\
-\hline
 CMAXD & 0.023625 mg/L/mg & 0.0236 mg/L/mg\\
-\hline
 TMAX & 2.02 h & 2.0200 h\\
-\hline
 TLAG & 0 h & 0.0000 h\\
-\hline
 CLST & 1.25 mg/L & 1.2500 mg/L\\
-\hline
+\addlinespace
 TLST & 24.12 h & 24.1200 h\\
-\hline
 LAMZHL & 8.510037883 h & 8.5100 h\\
-\hline
 LAMZ & 0.08145054 /h & 0.0815 /h\\
-\hline
 LAMZLL & 3.53 h & 3.5300 h\\
-\hline
 LAMZUL & 24.12 h & 24.1200 h\\
-\hline
+\addlinespace
 LAMZNPT & 6 & 6\\
-\hline
 CORRXY & -0.995496053 & -0.9955\\
-\hline
 R2 & 0.991012391 & 0.991\\
-\hline
 R2ADJ & 0.988765489 & 0.9888\\
-\hline
 AUCLST & 88.55995 h*mg/L & 88.5600 h*mg/L\\
-\hline
+\addlinespace
 AUCALL & 88.55995 h*mg/L & 88.5600 h*mg/L\\
-\hline
 AUCIFO & 103.906687 h*mg/L & 103.9067 h*mg/L\\
-\hline
 AUCIFOD & 0.324708 h*mg/L/mg & 0.3247 h*mg/L/mg\\
-\hline
 AUCIFP & 103.643051 h*mg/L & 103.6431 h*mg/L\\
-\hline
 AUCIFP & 0.323884 h*mg/L/mg & 0.3239 h*mg/L/mg\\
-\hline
+\addlinespace
 AUCPEO & 14.77\% & 14.77\%\\
-\hline
 AUCPEP & 14.55\% & 14.55\%\\
-\hline
 AUMCLST & 739.534598 h2*mg/L & 739.5346 h2*mg/L\\
-\hline
 AUMCIFO & 1298.115755 h2*mg/L & 1298.1158 h2*mg/L\\
-\hline
 AUMCIFP & 1288.520116 h2*mg/L & 1288.5201 h2*mg/L\\
-\hline
+\addlinespace
 AUMCPEO & 43.03\% & 43.03\%\\
-\hline
 AUMCPEP & 42.61\% & 42.61\%\\
-\hline
 VZFO & 37.81050811 L & 37.8105 L\\
-\hline
 VZFP & 37.90668616 L & 37.9067 L\\
-\hline
 CLFO & 3.079686301 L/h & 3.0797 L/h\\
-\hline
+\addlinespace
 CLFP & 3.087520055 L/h & 3.0875 L/h\\
-\hline
 MRTEVLST & 8.35066639 h & 8.3507 h\\
-\hline
 MRTEVIFO & 12.49309159 h & 12.4931 h\\
-\hline
 MRTEVIFP & 12.43228656 h & 12.4323 h\\
-\hline
+\bottomrule
 \end{tabular}
 \end{table}
 
@@ -519,7 +449,7 @@ trials with different dosing routes such as infusion, bolus, and oral
 route. As a result, we could not find any discrepancy between outputs
 generated by the R packages and WinNonlin®.
 
-\chapter{Discussion}\label{discussion}
+\chapter{Conclusion}\label{conclusion}
 
 We developed two R packages - NonCompart and ncar for NCA. Through these
 packages, we aimed to imple ment the following functionalities for
@@ -561,108 +491,16 @@ drug discovery process.
 
 \chapter{Environment}\label{environment}
 
-\begin{tabular}{l|l}
-\hline
+\begin{tabular}{ll}
+\toprule
 Package & Version\\
-\hline
+\midrule
 tidyverse & 1.2.1\\
-\hline
 NonCompart & 0.3.3\\
-\hline
 ncar & 0.3.7\\
-\hline
 knitr & 1.20\\
-\hline
+\bottomrule
 \end{tabular}
-
-\begin{verbatim}
-##  setting  value                       
-##  version  R version 3.4.3 (2017-11-30)
-##  system   x86_64, mingw32             
-##  ui       RTerm                       
-##  language (EN)                        
-##  collate  Korean_Korea.949            
-##  tz       Asia/Seoul                  
-##  date     2018-03-08                  
-## 
-##  package     * version    date       source                              
-##  assertthat    0.2.0      2017-04-11 CRAN (R 3.4.0)                      
-##  backports     1.1.2      2017-12-13 CRAN (R 3.4.3)                      
-##  base        * 3.4.3      2017-11-30 local                               
-##  bindr         0.1.0.9000 2018-02-08 Github (krlmlr/bindr@4b20179)       
-##  bindrcpp      0.2.0.9000 2018-02-08 Github (krlmlr/bindrcpp@7553d4f)    
-##  bookdown      0.7        2018-02-18 CRAN (R 3.4.3)                      
-##  broom         0.4.3      2017-11-20 CRAN (R 3.4.2)                      
-##  cellranger    1.1.0      2016-07-27 CRAN (R 3.4.0)                      
-##  cli           1.0.0      2017-11-05 CRAN (R 3.4.2)                      
-##  colorspace    1.3-2      2016-12-14 CRAN (R 3.4.0)                      
-##  compiler      3.4.3      2017-11-30 local                               
-##  crayon        1.3.4      2018-03-02 Github (gaborcsardi/crayon@95b3eae) 
-##  datasets    * 3.4.3      2017-11-30 local                               
-##  devtools      1.13.5     2018-02-18 CRAN (R 3.4.3)                      
-##  digest        0.6.15     2018-01-28 CRAN (R 3.4.3)                      
-##  dplyr       * 0.7.4.9000 2018-02-08 Github (tidyverse/dplyr@0a2c208)    
-##  evaluate      0.10.1     2017-06-24 CRAN (R 3.4.1)                      
-##  forcats     * 0.3.0      2018-02-19 CRAN (R 3.4.3)                      
-##  foreign       0.8-69     2017-06-22 CRAN (R 3.4.3)                      
-##  ggplot2     * 2.2.1      2016-12-30 CRAN (R 3.4.0)                      
-##  glue          1.2.0      2017-10-29 CRAN (R 3.4.2)                      
-##  graphics    * 3.4.3      2017-11-30 local                               
-##  grDevices   * 3.4.3      2017-11-30 local                               
-##  grid          3.4.3      2017-11-30 local                               
-##  gtable        0.2.0      2016-02-26 CRAN (R 3.4.0)                      
-##  haven         1.1.1      2018-01-18 CRAN (R 3.4.3)                      
-##  hms           0.4.1      2018-01-24 CRAN (R 3.4.3)                      
-##  htmltools     0.3.6      2017-04-28 CRAN (R 3.4.0)                      
-##  httr          1.3.1      2017-08-20 CRAN (R 3.4.1)                      
-##  jsonlite      1.5        2017-06-01 CRAN (R 3.4.0)                      
-##  knitr       * 1.20       2018-02-20 CRAN (R 3.4.3)                      
-##  lattice       0.20-35    2017-03-25 CRAN (R 3.4.3)                      
-##  lazyeval      0.2.1      2017-10-29 CRAN (R 3.4.2)                      
-##  lubridate     1.7.3      2018-02-27 CRAN (R 3.4.3)                      
-##  magrittr      1.5        2014-11-22 CRAN (R 3.4.0)                      
-##  memoise       1.1.0      2017-04-21 CRAN (R 3.4.0)                      
-##  methods       3.4.3      2017-11-30 local                               
-##  mnormt        1.5-5      2016-10-15 CRAN (R 3.4.0)                      
-##  modelr        0.1.1      2017-07-24 CRAN (R 3.4.1)                      
-##  munsell       0.4.3      2016-02-13 CRAN (R 3.4.0)                      
-##  ncar        * 0.3.7      2017-08-16 CRAN (R 3.4.1)                      
-##  nlme          3.1-131.1  2018-02-16 CRAN (R 3.4.3)                      
-##  NonCompart  * 0.3.3      2017-08-16 CRAN (R 3.4.1)                      
-##  parallel      3.4.3      2017-11-30 local                               
-##  pillar        1.2.1      2018-02-27 CRAN (R 3.4.3)                      
-##  pkgconfig     2.0.1      2017-03-21 CRAN (R 3.4.0)                      
-##  plyr          1.8.4      2016-06-08 CRAN (R 3.4.0)                      
-##  psych         1.7.8      2017-09-09 CRAN (R 3.4.1)                      
-##  purrr       * 0.2.4.9000 2018-03-02 Github (tidyverse/purrr@84ce1ad)    
-##  R.methodsS3   1.7.1      2016-02-16 CRAN (R 3.4.0)                      
-##  R.oo          1.21.0     2016-11-01 CRAN (R 3.4.0)                      
-##  R6            2.2.2      2017-06-17 CRAN (R 3.4.1)                      
-##  Rcpp          0.12.15    2018-01-20 CRAN (R 3.4.3)                      
-##  readr       * 1.1.1      2017-05-16 CRAN (R 3.4.0)                      
-##  readxl        1.0.0      2017-04-18 CRAN (R 3.4.0)                      
-##  reshape2      1.4.3      2017-12-11 CRAN (R 3.4.3)                      
-##  rlang         0.2.0      2018-02-20 CRAN (R 3.4.3)                      
-##  rmarkdown     1.9        2018-03-01 CRAN (R 3.4.3)                      
-##  rprojroot     1.3-2      2018-01-03 CRAN (R 3.4.3)                      
-##  rstudioapi    0.7        2017-09-07 CRAN (R 3.4.1)                      
-##  rtf         * 0.4-11     2013-11-12 CRAN (R 3.4.0)                      
-##  rvest         0.3.2      2016-06-17 CRAN (R 3.4.0)                      
-##  scales        0.5.0      2017-08-24 CRAN (R 3.4.1)                      
-##  stats       * 3.4.3      2017-11-30 local                               
-##  stringi       1.1.6      2017-11-17 CRAN (R 3.4.2)                      
-##  stringr     * 1.3.0      2018-02-19 CRAN (R 3.4.3)                      
-##  tibble      * 1.4.2      2018-01-22 CRAN (R 3.4.3)                      
-##  tidyr       * 0.8.0      2018-01-29 CRAN (R 3.4.3)                      
-##  tidyselect    0.2.4      2018-02-26 CRAN (R 3.4.3)                      
-##  tidyverse   * 1.2.1      2017-11-14 Github (tidyverse/tidyverse@3769ff2)
-##  tools         3.4.3      2017-11-30 local                               
-##  utils       * 3.4.3      2017-11-30 local                               
-##  withr         2.1.1.9000 2018-03-02 Github (r-lib/withr@5d05571)        
-##  xfun          0.1        2018-01-22 CRAN (R 3.4.3)                      
-##  xml2          1.2.0      2018-01-24 CRAN (R 3.4.3)                      
-##  yaml          2.1.17     2018-02-27 CRAN (R 3.4.3)
-\end{verbatim}
 
 \chapter{References}\label{references}
 

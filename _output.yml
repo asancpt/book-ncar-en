@@ -1,7 +1,7 @@
 bookdown::gitbook:
   dev: svglite
   css: css/style.css
-  split_by: section
+#  split_by: section
   config:
     toc:
       collapse: none
@@ -9,7 +9,7 @@ bookdown::gitbook:
 #        <li><a href="./">Authoring Books with R Markdown</a></li>
 #      after: |
 #        <li><a href="https://bookdown.org" target="_blank">Published with bookdown</a></li>
-    download: [pdf, epub, mobi]
+    download: [pdf, epub]
     edit: https://github.com/rstudio/bookdown/edit/master/inst/examples/%s
     sharing:
       github: yes
