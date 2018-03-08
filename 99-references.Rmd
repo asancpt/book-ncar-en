@@ -1,0 +1,36 @@
+# (APPENDIX) Appendix {-}
+
+# Environment
+
+```{r, echo = FALSE}
+pkgInfo <- lapply(pkg, packageDescription, fields = c("Package", "Version"))
+knitr::kable(data.frame(Package=sapply(pkgInfo, `[[`, 1), Version=sapply(pkgInfo, `[[`, 2)))
+devtools::session_info()
+```
+
+# References
+
+```{r, include = FALSE}
+knitr::write_bib(file = 'bib/packages.bib')
+```
+
+1. Acharya C, Hooker AC, Turkyilmaz GY, Jonsson S, Karlsson MO. A diag-
+nostic tool for population models using non-compartmental analysis: The
+ncappc package for R. Comput Methods Programs Biomed 2016;127:
+83-93. doi: 10.1016/j.cmpb.2016.01.013.
+2. Gabrielsson J, Weiner D. Non-compartmental analysis. Methods Mol Biol
+2012;929:377–389.
+3. The R Project for Statistical Computing. R. http://www.r-project.org/
+Accessed 6 November 2017.
+4. Kinetica. http://www.kinetica.com/ Accessed 28 February 2018
+5. Certara. Phenix WinNonlin®. https://www.certara.com/software/pkpd-
+modeling-and-simulation/phoenix-winnonlin/?ap%5B0%5D=PKPD/
+Accessed 28 February 2018.
+6. Kim MG, Yim DS, Bae KS. R-based reproduction of the estimation process
+hidden behind NONMEN Part 1: first-order approximation method. Transl
+Clin Pharmacol 2015;23:1-7.
+7. Study Data Tabulation Model Implementation Guide: Human Clinical Trials
+Version 3.2, Clinical Data Interchange Standards Consortium. https://www.
+cdisc.org/system/files/all/standard_category/application/pdf/sdtmig_
+v3.2.pdf. Accessed 28 February 2018.
+

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>R packages for Noncompartmental Analysis</title>
+  <meta name="description" content="R packages for Noncompartmental Analysis">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="R packages for Noncompartmental Analysis" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="R packages for Noncompartmental Analysis" />
+  
+  
+  
+
+<meta name="author" content="Sungpil Han">
+
+
+<meta name="date" content="2018-03-08">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="methods.html">
+<link rel="next" href="discussion.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="css\style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>2</b> Methods</a><ul>
+<li class="chapter" data-level="2.1" data-path="methods.html"><a href="methods.html#r-packages-noncompart-and-ncar"><i class="fa fa-check"></i><b>2.1</b> R packages (NonCompart and ncar)</a></li>
+<li class="chapter" data-level="2.2" data-path="methods.html"><a href="methods.html#software"><i class="fa fa-check"></i><b>2.2</b> Software</a></li>
+<li class="chapter" data-level="2.3" data-path="methods.html"><a href="methods.html#dataset"><i class="fa fa-check"></i><b>2.3</b> Dataset</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>3</b> Results</a><ul>
+<li class="chapter" data-level="3.1" data-path="results.html"><a href="results.html#noncompart-package-performance-of-nca"><i class="fa fa-check"></i><b>3.1</b> NonCompart package: performance of NCA</a></li>
+<li class="chapter" data-level="3.2" data-path="results.html"><a href="results.html#ncar-package-generation-of-nca-reports"><i class="fa fa-check"></i><b>3.2</b> ncar package: generation of NCA reports</a></li>
+<li class="chapter" data-level="3.3" data-path="results.html"><a href="results.html#validation-of-nca-results-between-r-packages-and-winnonlin"><i class="fa fa-check"></i><b>3.3</b> Validation of NCA results between R packages and WinNonlin®</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="discussion.html"><a href="discussion.html"><i class="fa fa-check"></i><b>4</b> Discussion</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="environment.html"><a href="environment.html"><i class="fa fa-check"></i><b>A</b> Environment</a></li>
+<li class="chapter" data-level="B" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>B</b> References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R packages for Noncompartmental Analysis</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="results" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Results</h1>
+<div id="noncompart-package-performance-of-nca" class="section level2">
+<h2><span class="header-section-number">3.1</span> NonCompart package: performance of NCA</h2>
+<p>This package conducts NCA as similarly as possible to the most widely used commercial PK analysis software. The NonCompart package has two main functions, tblNCA and sNCA, for use in multiple subjects and one subject, respectively. Figure 1 shows an example of output by tblNCA. The input data for tblNCA( ) should be in a long format as exemplified by the Theoph dataset. It is possible to input several keys such as subject demographics and information regarding dose, period, or sequence; the result of tblNCA( ) will print the key columns and the carried keys can be further used for additional statistical analysis (i.e. descriptive statistics, bioequivalence test, t-test, or ANOVA). The adm argument can be ‘Extravascular’, ‘Bolus’, or ‘Infusion’ and the down argument can be either ‘Linear’ or ‘Log’. The greatest advantage of this package is that the outputs produced by this package are compatible with those of pharmacokinetic parameter (PP) TESTCD of CDISC SDTM.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tblNCA</span>(Theoph, <span class="dt">key =</span> <span class="st">&quot;Subject&quot;</span>, <span class="dt">colTime =</span> <span class="st">&quot;Time&quot;</span>, <span class="dt">colConc =</span> <span class="st">&quot;conc&quot;</span>, <span class="dt">dose =</span> <span class="dv">320</span>, 
+       <span class="dt">adm =</span> <span class="st">&quot;Extravascular&quot;</span>, <span class="dt">dur =</span> <span class="dv">0</span>, <span class="dt">doseUnit =</span> <span class="st">&quot;mg&quot;</span>, <span class="dt">timeUnit =</span> <span class="st">&quot;h&quot;</span>, <span class="dt">concUnit =</span> <span class="st">&quot;mg/L&quot;</span>, 
+       <span class="dt">down =</span> <span class="st">&quot;Linear&quot;</span>)</code></pre></div>
+<p>IntAUC() function calculates interval (partial) AUC (from t 1 and t 2 ) with the given series of time and concentration. The interval AUC (0.5–11 hour) of the subject 8 can be calculated using the Theoph dataset with the following R script.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Time =<span class="st"> </span>Theoph[Theoph<span class="op">$</span>Subject <span class="op">==</span><span class="st"> </span><span class="dv">8</span>, <span class="st">&quot;Time&quot;</span>]
+Concentration =<span class="st"> </span>Theoph[Theoph<span class="op">$</span>Subject <span class="op">==</span><span class="st"> </span><span class="dv">8</span>, <span class="st">&quot;conc&quot;</span>]
+Res =<span class="st"> </span><span class="kw">sNCA</span>(Time, Concentration,<span class="dt">dose =</span> <span class="dv">320</span>, <span class="dt">concUnit =</span> <span class="st">&quot;mg/L&quot;</span>)
+<span class="kw">IntAUC</span>(Time, Concentration, <span class="dt">t1 =</span> <span class="fl">0.5</span>, <span class="dt">t2 =</span> <span class="dv">11</span>, Res)</code></pre></div>
+<pre><code>## [1] 58.26022</code></pre>
+<!-- # [1] 58.26022 -->
+</div>
+<div id="ncar-package-generation-of-nca-reports" class="section level2">
+<h2><span class="header-section-number">3.2</span> ncar package: generation of NCA reports</h2>
+<p>This package generates complete NCA reports including plots with both linear and logarithmic scale. Its two main functions are pdfNCA and rtfNCA, which produce pdf file format and rtf file format, respectively. The generated reports are similar to those generated from commercial softwares, but like NonCompart, this package has the advantage of using PPTESTCD of CDISC SDTM. ncar produces NCA reports through NonCompart and converts them into Microsoft Word format when using rtfNCA( ), which is convenient for editing. Re- ports generated by pdfNCA( )function show individual plots with trend lines that joins the dots used for calculating terminal slopes. Figure 2 shows an example of an NCA report in pdf for- mat and an individual concentration-time plot.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pdfNCA</span>(<span class="dt">fileName =</span> <span class="st">&quot;pdfNCA-Theoph.pdf&quot;</span>,
+Theoph, <span class="dt">colSubj =</span> <span class="st">&quot;Subject&quot;</span>, <span class="dt">colTime =</span>
+<span class="st">&quot;Time&quot;</span>, <span class="dt">colConc =</span> <span class="st">&quot;conc&quot;</span>, <span class="dt">dose =</span> <span class="dv">320</span>,
+<span class="dt">doseUnit =</span> <span class="st">&quot;mg&quot;</span>, <span class="dt">timeUnit =</span> <span class="st">&quot;h&quot;</span>, concU<span class="op">-</span>
+<span class="dt">nit =</span> <span class="st">&quot;mg/L&quot;</span>, <span class="dt">down =</span> <span class="st">&quot;Linear&quot;</span>)</code></pre></div>
+</div>
+<div id="validation-of-nca-results-between-r-packages-and-winnonlin" class="section level2">
+<h2><span class="header-section-number">3.3</span> Validation of NCA results between R packages and WinNonlin®</h2>
+<p>To demonstrate the accordance of outputs by ncar package and WinNonlin®, we performed NCA using Theoph dataset ob- tained from the R software. For comparison of the NCA results, we selected the following conditions: extravascular, linear-up linear-down, and best fit. We found no discrepancy between the two results as shown in Table 3 (a randomized subject, Subject ID = 8). In order to further validate these packages, we compared NCA results using Indometh, another available dataset of the R software as well as other datasets of a number of subjects from several phase 1 clinical trials with different dosing routes such as infusion, bolus, and oral route. As a result, we could not find any discrepancy between outputs generated by the R packages and WinNonlin®.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="methods.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="discussion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

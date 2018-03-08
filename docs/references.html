@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Tutorial: R packages for NCA</title>
-  <meta name="description" content="Tutorial: R packages for NCA">
-  <meta name="generator" content="bookdown 0.5.10 and GitBook 2.6.7">
+  <title>R packages for Noncompartmental Analysis</title>
+  <meta name="description" content="R packages for Noncompartmental Analysis">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
-  <meta property="og:title" content="Tutorial: R packages for NCA" />
+  <meta property="og:title" content="R packages for Noncompartmental Analysis" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Tutorial: R packages for NCA" />
+  <meta name="twitter:title" content="R packages for Noncompartmental Analysis" />
   
   
   
@@ -25,14 +25,14 @@
 <meta name="author" content="Sungpil Han">
 
 
-<meta name="date" content="2017-12-04">
+<meta name="date" content="2018-03-08">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="figures.html">
+<link rel="prev" href="environment.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -100,20 +100,23 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Abstract</a></li>
-<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
-<li class="chapter" data-level="3" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>3</b> Methods</a><ul>
-<li class="chapter" data-level="3.1" data-path="methods.html"><a href="methods.html#softwares"><i class="fa fa-check"></i><b>3.1</b> Softwares</a></li>
-<li class="chapter" data-level="3.2" data-path="methods.html"><a href="methods.html#datasets"><i class="fa fa-check"></i><b>3.2</b> Datasets</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>2</b> Methods</a><ul>
+<li class="chapter" data-level="2.1" data-path="methods.html"><a href="methods.html#r-packages-noncompart-and-ncar"><i class="fa fa-check"></i><b>2.1</b> R packages (NonCompart and ncar)</a></li>
+<li class="chapter" data-level="2.2" data-path="methods.html"><a href="methods.html#software"><i class="fa fa-check"></i><b>2.2</b> Software</a></li>
+<li class="chapter" data-level="2.3" data-path="methods.html"><a href="methods.html#dataset"><i class="fa fa-check"></i><b>2.3</b> Dataset</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="examples.html"><a href="examples.html"><i class="fa fa-check"></i><b>4</b> Examples</a><ul>
-<li class="chapter" data-level="4.1" data-path="examples.html"><a href="examples.html#calculation"><i class="fa fa-check"></i><b>4.1</b> Calculation</a></li>
-<li class="chapter" data-level="4.2" data-path="examples.html"><a href="examples.html#reports"><i class="fa fa-check"></i><b>4.2</b> Reports</a></li>
-<li class="chapter" data-level="4.3" data-path="examples.html"><a href="examples.html#plots"><i class="fa fa-check"></i><b>4.3</b> Plots</a></li>
+<li class="chapter" data-level="3" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>3</b> Results</a><ul>
+<li class="chapter" data-level="3.1" data-path="results.html"><a href="results.html#noncompart-package-performance-of-nca"><i class="fa fa-check"></i><b>3.1</b> NonCompart package: performance of NCA</a></li>
+<li class="chapter" data-level="3.2" data-path="results.html"><a href="results.html#ncar-package-generation-of-nca-reports"><i class="fa fa-check"></i><b>3.2</b> ncar package: generation of NCA reports</a></li>
+<li class="chapter" data-level="3.3" data-path="results.html"><a href="results.html#validation-of-nca-results-between-r-packages-and-winnonlin"><i class="fa fa-check"></i><b>3.3</b> Validation of NCA results between R packages and WinNonlin®</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="summary.html"><a href="summary.html"><i class="fa fa-check"></i><b>5</b> Summary</a></li>
-<li class="chapter" data-level="6" data-path="figures.html"><a href="figures.html"><i class="fa fa-check"></i><b>6</b> Figures</a></li>
-<li class="chapter" data-level="7" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>7</b> References</a></li>
+<li class="chapter" data-level="4" data-path="discussion.html"><a href="discussion.html"><i class="fa fa-check"></i><b>4</b> Discussion</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="environment.html"><a href="environment.html"><i class="fa fa-check"></i><b>A</b> Environment</a></li>
+<li class="chapter" data-level="B" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>B</b> References</a></li>
 </ul>
 
       </nav>
@@ -123,7 +126,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Tutorial: R packages for NCA</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R packages for Noncompartmental Analysis</a>
           </h1>
         </div>
 
@@ -132,28 +135,35 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="references" class="section level1">
-<h1><span class="header-section-number">Chapter 7</span> References</h1>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">write_bib</span>(<span class="dt">file =</span> <span class="st">&#39;packages.bib&#39;</span>)</code></pre></div>
-<pre><code>## Warning in citation(pkg, auto = if (pkg == &quot;base&quot;) NULL else TRUE): no date
-## field in DESCRIPTION file of package &#39;dplyr&#39;</code></pre>
-<pre><code>## Warning in citation(pkg, auto = if (pkg == &quot;base&quot;) NULL else TRUE): could
-## not determine year for &#39;dplyr&#39; from package DESCRIPTION file</code></pre>
-<pre><code>## Warning in citation(pkg, auto = if (pkg == &quot;base&quot;) NULL else TRUE): no date
-## field in DESCRIPTION file of package &#39;purrr&#39;</code></pre>
-<pre><code>## Warning in citation(pkg, auto = if (pkg == &quot;base&quot;) NULL else TRUE): could
-## not determine year for &#39;purrr&#39; from package DESCRIPTION file</code></pre>
-<pre><code>## Warning in citation(pkg, auto = if (pkg == &quot;base&quot;) NULL else TRUE): no date
-## field in DESCRIPTION file of package &#39;tidyverse&#39;</code></pre>
-<pre><code>## Warning in citation(pkg, auto = if (pkg == &quot;base&quot;) NULL else TRUE): could
-## not determine year for &#39;tidyverse&#39; from package DESCRIPTION file</code></pre>
+<h1><span class="header-section-number">B</span> References</h1>
+<ol style="list-style-type: decimal">
+<li>Acharya C, Hooker AC, Turkyilmaz GY, Jonsson S, Karlsson MO. A diag- nostic tool for population models using non-compartmental analysis: The ncappc package for R. Comput Methods Programs Biomed 2016;127: 83-93. doi: 10.1016/j.cmpb.2016.01.013.</li>
+<li>Gabrielsson J, Weiner D. Non-compartmental analysis. Methods Mol Biol 2012;929:377–389.</li>
+<li>The R Project for Statistical Computing. R. <a href="http://www.r-project.org/" class="uri">http://www.r-project.org/</a> Accessed 6 November 2017.</li>
+<li>Kinetica. <a href="http://www.kinetica.com/" class="uri">http://www.kinetica.com/</a> Accessed 28 February 2018</li>
+<li>Certara. Phenix WinNonlin®. <a href="https://www.certara.com/software/pkpd-" class="uri">https://www.certara.com/software/pkpd-</a> modeling-and-simulation/phoenix-winnonlin/?ap%5B0%5D=PKPD/ Accessed 28 February 2018.</li>
+<li>Kim MG, Yim DS, Bae KS. R-based reproduction of the estimation process hidden behind NONMEN Part 1: first-order approximation method. Transl Clin Pharmacol 2015;23:1-7.</li>
+<li>Study Data Tabulation Model Implementation Guide: Human Clinical Trials Version 3.2, Clinical Data Interchange Standards Consortium. <a href="https://www" class="uri">https://www</a>. cdisc.org/system/files/all/standard_category/application/pdf/sdtmig_ v3.2.pdf. Accessed 28 February 2018.</li>
+</ol>
 
+<div id="refs" class="references">
+<div>
+<p>Bae, Kyun-Seop. 2017a. <em>Ncar: Noncompartmental Analysis for Pharmacokinetic Report</em>. <a href="https://CRAN.R-project.org/package=ncar" class="uri">https://CRAN.R-project.org/package=ncar</a>.</p>
+</div>
+<div>
+<p>———. 2017b. <em>NonCompart: Noncompartmental Analysis for Pharmacokinetic Data</em>. <a href="https://CRAN.R-project.org/package=NonCompart" class="uri">https://CRAN.R-project.org/package=NonCompart</a>.</p>
+</div>
+<div>
+<p>R Core Team. 2017. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/" class="uri">https://www.R-project.org/</a>.</p>
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="figures.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="environment.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
@@ -172,10 +182,11 @@ gitbook.start({
 "facebook": true,
 "twitter": true,
 "google": false,
+"linkedin": false,
 "weibo": false,
 "instapper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",

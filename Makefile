@@ -29,3 +29,5 @@ clean:
 rmd:
 	Rscript -e "rmarkdown::render('keynote.Rmd', output_format = 'html_document', encoding = 'UTF-8')"
 
+go:
+	make gitbook ; open docs/index.html
