@@ -25,7 +25,7 @@
 <meta name="author" content="Sungpil Han">
 
 
-<meta name="date" content="2018-03-08">
+<meta name="date" content="2018-03-21">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -50,41 +50,69 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="css\style.css" type="text/css" />
@@ -138,24 +166,64 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h1><span class="header-section-number">Chapter 3</span> Results</h1>
 <div id="noncompart-package-performance-of-nca" class="section level2">
 <h2><span class="header-section-number">3.1</span> NonCompart package: performance of NCA</h2>
-<p>This package conducts NCA as similarly as possible to the most widely used commercial PK analysis software. The NonCompart package has two main functions, tblNCA and sNCA, for use in multiple subjects and one subject, respectively. Figure 1 shows an example of output by tblNCA. The input data for tblNCA( ) should be in a long format as exemplified by the Theoph dataset. It is possible to input several keys such as subject demographics and information regarding dose, period, or sequence; the result of tblNCA( ) will print the key columns and the carried keys can be further used for additional statistical analysis (i.e. descriptive statistics, bioequivalence test, t-test, or ANOVA). The adm argument can be ‘Extravascular’, ‘Bolus’, or ‘Infusion’ and the down argument can be either ‘Linear’ or ‘Log’. The greatest advantage of this package is that the outputs produced by this package are compatible with those of pharmacokinetic parameter (PP) TESTCD of CDISC SDTM.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tblNCA</span>(Theoph, <span class="dt">key =</span> <span class="st">&quot;Subject&quot;</span>, <span class="dt">colTime =</span> <span class="st">&quot;Time&quot;</span>, <span class="dt">colConc =</span> <span class="st">&quot;conc&quot;</span>, <span class="dt">dose =</span> <span class="dv">320</span>, 
-       <span class="dt">adm =</span> <span class="st">&quot;Extravascular&quot;</span>, <span class="dt">dur =</span> <span class="dv">0</span>, <span class="dt">doseUnit =</span> <span class="st">&quot;mg&quot;</span>, <span class="dt">timeUnit =</span> <span class="st">&quot;h&quot;</span>, <span class="dt">concUnit =</span> <span class="st">&quot;mg/L&quot;</span>, 
-       <span class="dt">down =</span> <span class="st">&quot;Linear&quot;</span>)</code></pre></div>
-<p>IntAUC() function calculates interval (partial) AUC (from t 1 and t 2 ) with the given series of time and concentration. The interval AUC (0.5–11 hour) of the subject 8 can be calculated using the Theoph dataset with the following R script.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Time =<span class="st"> </span>Theoph[Theoph<span class="op">$</span>Subject <span class="op">==</span><span class="st"> </span><span class="dv">8</span>, <span class="st">&quot;Time&quot;</span>]
-Concentration =<span class="st"> </span>Theoph[Theoph<span class="op">$</span>Subject <span class="op">==</span><span class="st"> </span><span class="dv">8</span>, <span class="st">&quot;conc&quot;</span>]
-Res =<span class="st"> </span><span class="kw">sNCA</span>(Time, Concentration,<span class="dt">dose =</span> <span class="dv">320</span>, <span class="dt">concUnit =</span> <span class="st">&quot;mg/L&quot;</span>)
-<span class="kw">IntAUC</span>(Time, Concentration, <span class="dt">t1 =</span> <span class="fl">0.5</span>, <span class="dt">t2 =</span> <span class="dv">11</span>, Res)</code></pre></div>
+<p>This package conducts NCA as similarly as possible to the most widely used commercial PK analysis software.
+The NonCompart package has two main functions, tblNCA and sNCA, for use in multiple subjects and one subject, respectively.
+Figure 1 shows an example of output by tblNCA. The input data for tblNCA( ) should be in a long format as exemplified by the Theoph dataset.
+It is possible to input several keys such as subject demographics and information regarding dose, period, or sequence; the result of tblNCA( ) will print the key columns and the carried keys can be further used for additional statistical analysis (i.e. descriptive statistics, bioequivalence test, t-test, or ANOVA).
+The adm argument can be ‘Extravascular’, ‘Bolus’, or ‘Infusion’ and the down argument can be either ‘Linear’ or ‘Log’.
+The greatest advantage of this package is that the outputs produced by this package are compatible with those of pharmacokinetic parameter (PP) TESTCD of CDISC SDTM.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">tblNCA</span>(Theoph, <span class="dt">key =</span> <span class="st">&quot;Subject&quot;</span>, <span class="dt">colTime =</span> <span class="st">&quot;Time&quot;</span>, <span class="dt">colConc =</span> <span class="st">&quot;conc&quot;</span>, <span class="dt">dose =</span> <span class="dv">320</span>, </a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">       <span class="dt">adm =</span> <span class="st">&quot;Extravascular&quot;</span>, <span class="dt">dur =</span> <span class="dv">0</span>, <span class="dt">doseUnit =</span> <span class="st">&quot;mg&quot;</span>, <span class="dt">timeUnit =</span> <span class="st">&quot;h&quot;</span>, <span class="dt">concUnit =</span> <span class="st">&quot;mg/L&quot;</span>, </a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">       <span class="dt">down =</span> <span class="st">&quot;Linear&quot;</span>)</a></code></pre></div>
+<p>IntAUC() function calculates interval (partial) AUC (from t 1 and t 2 ) with the given series of time and concentration.
+The interval AUC (0.5–11 hour) of the subject 8 can be calculated using the Theoph dataset with the following R script.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">Time =<span class="st"> </span>Theoph[Theoph<span class="op">$</span>Subject <span class="op">==</span><span class="st"> </span><span class="dv">8</span>, <span class="st">&quot;Time&quot;</span>]</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">Concentration =<span class="st"> </span>Theoph[Theoph<span class="op">$</span>Subject <span class="op">==</span><span class="st"> </span><span class="dv">8</span>, <span class="st">&quot;conc&quot;</span>]</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">Res =<span class="st"> </span><span class="kw">sNCA</span>(Time, Concentration,<span class="dt">dose =</span> <span class="dv">320</span>, <span class="dt">concUnit =</span> <span class="st">&quot;mg/L&quot;</span>)</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="kw">IntAUC</span>(Time, Concentration, <span class="dt">t1 =</span> <span class="fl">0.5</span>, <span class="dt">t2 =</span> <span class="dv">11</span>, Res)</a></code></pre></div>
 <pre><code>## [1] 58.26022</code></pre>
 <!-- # [1] 58.26022 -->
 </div>
 <div id="ncar-package-generation-of-nca-reports" class="section level2">
 <h2><span class="header-section-number">3.2</span> ncar package: generation of NCA reports</h2>
-<p>This package generates complete NCA reports including plots with both linear and logarithmic scale. Its two main functions are pdfNCA and rtfNCA, which produce pdf file format and rtf file format, respectively. The generated reports are similar to those generated from commercial softwares, but like NonCompart, this package has the advantage of using PPTESTCD of CDISC SDTM. ncar produces NCA reports through NonCompart and converts them into Microsoft Word format when using rtfNCA( ), which is convenient for editing. Re- ports generated by pdfNCA( )function show individual plots with trend lines that joins the dots used for calculating terminal slopes. Figure <a href="results.html#fig:figure2">3.1</a> 2 shows an example of an NCA report in pdf for- mat and an individual concentration-time plot.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pdfNCA</span>(<span class="dt">fileName =</span> <span class="st">&quot;pdfNCA-Theoph.pdf&quot;</span>, Theoph, <span class="dt">colSubj =</span> <span class="st">&quot;Subject&quot;</span>, 
-       <span class="dt">colTime =</span> <span class="st">&quot;Time&quot;</span>, <span class="dt">colConc =</span> <span class="st">&quot;conc&quot;</span>, <span class="dt">dose =</span> <span class="dv">320</span>, <span class="dt">doseUnit =</span> <span class="st">&quot;mg&quot;</span>, 
-       <span class="dt">timeUnit =</span> <span class="st">&quot;h&quot;</span>, <span class="dt">concUnit =</span> <span class="st">&quot;mg/L&quot;</span>, <span class="dt">down =</span> <span class="st">&quot;Linear&quot;</span>)</code></pre></div>
+<p>This package generates complete NCA reports including plots
+with both linear and logarithmic scale. Its two main functions
+are pdfNCA and rtfNCA, which produce pdf file format
+and rtf file format, respectively. The generated reports are
+similar to those generated from commercial softwares, but like
+NonCompart, this package has the advantage of using PPTESTCD of CDISC SDTM. ncar produces NCA reports through
+NonCompart and converts them into Microsoft Word format
+when using rtfNCA( ), which is convenient for editing. Re-
+ports generated by pdfNCA( )function show individual plots
+with trend lines that joins the dots used for calculating terminal
+slopes. Figure <a href="results.html#fig:figure2">3.1</a> 2 shows an example of an NCA report in pdf for-
+mat and an individual concentration-time plot.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">pdfNCA</span>(<span class="dt">fileName =</span> <span class="st">&quot;pdfNCA-Theoph.pdf&quot;</span>, Theoph, <span class="dt">colSubj =</span> <span class="st">&quot;Subject&quot;</span>, </a>
+<a class="sourceLine" id="cb5-2" data-line-number="2">       <span class="dt">colTime =</span> <span class="st">&quot;Time&quot;</span>, <span class="dt">colConc =</span> <span class="st">&quot;conc&quot;</span>, <span class="dt">dose =</span> <span class="dv">320</span>, <span class="dt">doseUnit =</span> <span class="st">&quot;mg&quot;</span>, </a>
+<a class="sourceLine" id="cb5-3" data-line-number="3">       <span class="dt">timeUnit =</span> <span class="st">&quot;h&quot;</span>, <span class="dt">concUnit =</span> <span class="st">&quot;mg/L&quot;</span>, <span class="dt">down =</span> <span class="st">&quot;Linear&quot;</span>)</a></code></pre></div>
+<pre><code>## Warning: Sys.timezone(location = FALSE) is deprecated
+
+## Warning: Sys.timezone(location = FALSE) is deprecated
+
+## Warning: Sys.timezone(location = FALSE) is deprecated
+
+## Warning: Sys.timezone(location = FALSE) is deprecated
+
+## Warning: Sys.timezone(location = FALSE) is deprecated
+
+## Warning: Sys.timezone(location = FALSE) is deprecated
+
+## Warning: Sys.timezone(location = FALSE) is deprecated
+
+## Warning: Sys.timezone(location = FALSE) is deprecated
+
+## Warning: Sys.timezone(location = FALSE) is deprecated
+
+## Warning: Sys.timezone(location = FALSE) is deprecated
+
+## Warning: Sys.timezone(location = FALSE) is deprecated
+
+## Warning: Sys.timezone(location = FALSE) is deprecated</code></pre>
 <pre><code>## pdf 
 ##   2</code></pre>
 <div class="figure"><span id="fig:figure2"></span>
@@ -179,7 +247,13 @@ Figure 3.1: Examples of ncar package functions. (A) Example of a NCA report in p
 </div>
 <div id="validation-of-nca-results-between-r-packages-and-winnonlin" class="section level2">
 <h2><span class="header-section-number">3.3</span> Validation of NCA results between R packages and WinNonlin®</h2>
-<p>To demonstrate the accordance of outputs by ncar package and WinNonlin®, we performed NCA using Theoph dataset ob- tained from the R software. For comparison of the NCA results, we selected the following conditions: extravascular, linear-up linear-down, and best fit. We found no discrepancy between the two results as shown in Table <a href="methods.html#tab:table2">2.2</a> (a randomized subject, Subject ID = 8).</p>
+<p>To demonstrate the accordance of outputs by ncar package and
+WinNonlin®, we performed NCA using Theoph dataset ob-
+tained from the R software. For comparison of the NCA results,
+we selected the following conditions: extravascular, linear-up
+linear-down, and best fit. We found no discrepancy between the
+two results as shown in Table <a href="methods.html#tab:table2">2.2</a> (a randomized subject, Subject
+ID = 8).</p>
 <table>
 <caption><span id="tab:table3">Table 3.1: </span>Comparison of NCA results generated from WinNonlin and ncar package</caption>
 <thead>
@@ -362,7 +436,13 @@ Figure 3.1: Examples of ncar package functions. (A) Example of a NCA report in p
 </tr>
 </tbody>
 </table>
-<p>In order to further validate these packages, we compared NCA results using Indometh, another available dataset of the R software as well as other datasets of a number of subjects from several phase 1 clinical trials with different dosing routes such as infusion, bolus, and oral route. As a result, we could not find any discrepancy between outputs generated by the R packages and WinNonlin®.</p>
+<p>In order to further validate these packages, we compared NCA
+results using Indometh, another available dataset of the R
+software as well as other datasets of a number of subjects from
+several phase 1 clinical trials with different dosing routes such
+as infusion, bolus, and oral route. As a result, we could not find
+any discrepancy between outputs generated by the R packages
+and WinNonlin®.</p>
 
 </div>
 </div>
