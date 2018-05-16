@@ -34,8 +34,7 @@ Noncompartmental analysis (NCA) is a primary analytical approach for pharmacokin
 
 # Acknowledgements {-}
 
-This research was supported by the EDISON (EDucation-
-research Integration through Simulation On the Net) Program
+This research was supported by the EDISON (EDucation-research Integration through Simulation On the Net) Program
 through the National Research Foundation of Korea (NRF)
 funded by the Ministry of Education, Science and Technology
 (Grant number: 016M3C1A6936614). We thank Dr. Joon Seo
@@ -43,3 +42,4 @@ Lim from the Scientific Publications Team at Asan Medical
 Center for his editorial assistance in preparing this manuscript.
 
 \mainmatter
+
