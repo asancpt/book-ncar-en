@@ -43,7 +43,7 @@ slopes. Figure \@ref(fig:figure2) 2 shows an example of an NCA report in pdf for
 mat and an individual concentration-time plot.
 
 ```{r, message = FALSE}
-pdfNCA(fileName = "pdfNCA-Theoph.pdf", Theoph, colSubj = "Subject", 
+ncar::pdfNCA(fileName = "pdfNCA-Theoph.pdf", Theoph, key = "Subject", 
        colTime = "Time", colConc = "conc", dose = 320, doseUnit = "mg", 
        timeUnit = "h", concUnit = "mg/L", down = "Linear")
 ```
@@ -54,8 +54,8 @@ system('magick -density 300 pdfNCA-Theoph.pdf[23] assets/pdfNCA-2.png')
 system('magick -density 300 pdfNCA-Theoph.pdf[24] assets/pdfNCA-3.png')
 ```
 
-```{r figure2, fig.cap = 'Examples of ncar package functions. (A) Example of a NCA report in pdf format by pdfNCA, (B) Individual concentration-time plots (left: linear scale, right: log-linear scale).', echo = FALSE}
-include_graphics(c('assets/pdfNCA-1.png', 'assets/pdfNCA-2.png', 'assets/pdfNCA-3.png'))
+```{r figure2, fig.cap = 'Examples of ncar package functions. (A) Example of a NCA report in pdf format by pdfNCA, (B) Individual concentration-time plots (left: linear scale, right: log-linear scale).', echo = FALSE, include = FALSE}
+include_graphics(c('assets/pdfNCA-1.png'))
 ```
 
 ## Validation of NCA results between R packages and WinNonlin®
